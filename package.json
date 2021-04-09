@@ -1,0 +1,36 @@
+{
+  "name": "mocha-w3c-interop-reporter",
+  "version": "0.0.1",
+  "description": "Mocha reporter that produces reports that can be embedded in specs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalbazaar/mocha-w3c-interop-reporter.git"
+  },
+  "keywords": [
+    "reporter",
+    "mocha",
+    "w3c"
+  ],
+  "author": "Digital Bazaar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-digitalbazaar": "^2.6.1",
+    "eslint-plugin-jsdoc": "^32.3.0"
+  },
+  "peerDependencies": {
+    "mocha: >= 6.0"
+  }
+}
