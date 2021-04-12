@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const testConfig = require('./config.json');
 const template = require('./handlebars');
-const {getJSONFiles} = require('../io.js');
+const {getJSONFiles, getPartial} = require('files.js');
 
 //masterName is the name of the main report
 //used to get the title of all tests for the spec
@@ -19,6 +19,12 @@ async function makeMaster(masterName) {
     implementations: [],
     tests: {}
   };
+  const {templates} = testConfig;
+  // go ahead and load these partial templates
+  // from disk into handlebars
+  await getPartial(templates.head);
+  await getPartial(templates.body);
+  await getPartial(templates.report);
   const files = await getJSONFiles(testConfig.dirs.results);
   const masterFile = `${masterName}-report.json`;
   const masterPath = files.find(f => f === masterFile);
