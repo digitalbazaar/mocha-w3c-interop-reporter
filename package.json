@@ -31,6 +31,6 @@
     "eslint-plugin-jsdoc": "^32.3.0"
   },
   "peerDependencies": {
-    "mocha: >= 6.0"
+    "mocha": ">= 6.0"
   }
 }
