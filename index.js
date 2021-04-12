@@ -6,7 +6,7 @@
 require = require('esm')(module);
 const mocha = require('mocha');
 
-exports = module.exports = ImplementationReporter;
+exports = module.exports = InteropReporter;
 
 // WARNING: only compatible with mocha >=  6.0.0
 // requires a manual import (see test-mocha.js)
@@ -18,7 +18,8 @@ exports = module.exports = ImplementationReporter;
  * @param {Function} runner - A mocha runner.
  * @param {object} options - The command line options passed to mocha.
  */
-function ImplementationReporter(runner, options) {
+function InteropReporter(runner, options) {
+  // inherit the base Mocha reporter
   mocha.reporters.Base.call(this, runner, options);
   const report = {};
   // add new fields for the final report here.
