@@ -3,6 +3,9 @@
     "results": "../results",
     "report": "../report"
   },
+  "respecConfig": {
+
+  },
   "templates": {
     "body": "./body.hsbs'",
     "head": "./head.hbs",
