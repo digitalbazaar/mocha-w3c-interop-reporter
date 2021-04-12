@@ -1,0 +1,12 @@
+{
+  "dirs": {
+    "results": "../results",
+    "report": "../report"
+  },
+  "templates": {
+    "body": "./body.hsbs'",
+    "head": "./head.hbs",
+    "table": "./table.hbs",
+    "matrix": "./matrix.hbs"
+  }
+}
