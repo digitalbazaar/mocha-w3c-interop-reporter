@@ -1,6 +1,7 @@
 const Handlebars = require('handlebars');
 const fs = require('fs');
 const path = require('path');
+const {passing, failed, pending} = require('./constants');
 
 const dirContents = fs.readdirSync(__dirname);
 
@@ -14,13 +15,12 @@ partials.forEach(file => {
 });
 
 Handlebars.registerHelper('getStatusMark', state => {
-  let statusMark = '-';
-
+  let statusMark = pending;
   if(state === 'passed') {
-    statusMark = '✓';
+    statusMark = passing;
   }
   if(state === 'failed') {
-    statusMark = '❌';
+    statusMark = failed;
   }
   return statusMark;
 });
