@@ -6,7 +6,8 @@
 require = require('esm')(module);
 const Mocha = require('mocha');
 const Chalk = require('chalk');
-const {passing, failed, spaces} = require('./constants');
+const {passing, failed} = require('./constants');
+const {spaces, parents} = require('./utils');
 const {
   EVENT_RUN_BEGIN,
   EVENT_RUN_END,
@@ -39,15 +40,10 @@ function InteropReporter(runner, options) {
       .replace(parentSuite, '')
       .trim();
     return {
+      ...test,
       fullTitle,
-      // just in case the parentSuite contains optional
-      optional: /optional/i.test(test.fullTitle()),
       title: test.title.replace(/\s\s/g, ''),
-      pending: test.pending,
-      state: test.state,
-      duration: test.duration,
-      speed: test.speed,
-      errors: test.err ? test.err.message : ''
+      errors: test.err ? test.err.message : '',
     };
   }
   // recurse through suites collecting all their finished tests.
@@ -63,7 +59,7 @@ function InteropReporter(runner, options) {
     if(!suite.title) {
       return;
     }
-    console.log(spaces(suite.parent ? 0 : 2), suite.title);
+    console.log(spaces(parents(suite) * 2), suite.title);
     // the parent suite will setup the report structure.
     if(!suite.parent) {
       suite.suites.forEach(s => {
@@ -78,9 +74,9 @@ function InteropReporter(runner, options) {
       addSubTests(suite.suites, suite.title);
     }
   }).on(EVENT_TEST_PASS, test => {
-    console.log(spaces(4), Chalk.green(passing), test.title);
+    console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);
   }).on(EVENT_TEST_FAIL, test => {
-    console.log(spaces(4), Chalk.red(failed), test.title);
+    console.log(spaces(parents(test) * 2), Chalk.red(failed), test.title);
   }).on(EVENT_RUN_END, function() {
     try {
       Object.keys(report).forEach(name => {
