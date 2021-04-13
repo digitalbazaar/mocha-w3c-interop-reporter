@@ -7,8 +7,8 @@
  * Generates the Report using a set of report files.
  */
 const testConfig = require('./config.json');
-const template = require('./handlebars');
-const {getPartial} = require('files.js');
+const {makeTemplate} = require('./handlebars');
+const {getPartial} = require('./files.js');
 
 //masterName is the name of the main report
 //used to get the title of all tests for the spec
@@ -23,6 +23,7 @@ async function makeReport({fileName, report}) {
   await getPartial(templates.head);
   await getPartial(templates.body);
   await getPartial(templates.report);
+  makeTemplate();
   return context;
 }
 

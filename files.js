@@ -13,7 +13,7 @@ export const asyncWriteFile = promisify(writeFile);
 export const asyncReadFile = promisify(readFile);
 
 export const getPartial = async file => {
-  const partial = await readFile(
+  const partial = await asyncReadFile(
     join(__dirname, file), 'utf8');
   return Handlebars.registerPartial(file, partial);
 };

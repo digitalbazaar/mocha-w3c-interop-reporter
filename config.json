@@ -7,7 +7,7 @@
     "shortName": "shortName"
   },
   "templates": {
-    "body": "./body.hsbs'",
+    "body": "./body.hbs'",
     "head": "./head.hbs",
     "table": "./table.hbs",
     "matrix": "./matrix.hbs"
