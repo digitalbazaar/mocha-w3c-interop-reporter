@@ -8,7 +8,7 @@ const Mocha = require('mocha');
 const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
-
+const {makeReport} = require('./generate');
 const {
   EVENT_RUN_END,
   EVENT_TEST_FAIL,
@@ -80,7 +80,7 @@ function InteropReporter(runner, options) {
     console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);
   }).on(EVENT_TEST_FAIL, test => {
     console.log(spaces(parents(test) * 2), Chalk.red(failed), test.title);
-  }).on(EVENT_RUN_END, function() {
+  }).on(EVENT_RUN_END, async function() {
     try {
       Object.keys(report).forEach(name => {
         // create a function for each test under this name
@@ -91,6 +91,8 @@ function InteropReporter(runner, options) {
           .sort((a, b) => a.optional - b.optional);
       });
       console.log('reports on', Object.keys(report));
+      const result = await makeReport({fileName: 'report.html', report});
+      console.log('Generated new report.', result);
     } catch(e) {
       console.error(e);
     }
