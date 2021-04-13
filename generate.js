@@ -20,12 +20,13 @@ async function makeReport({fileName, report}) {
   const {templates} = testConfig;
   // go ahead and load these partial templates
   // from disk into handlebars
-  await getPartial(templates.head);
-  await getPartial(templates.body);
-  await getPartial(templates.metrics);
-  await getPartial(templates.table);
-  await getPartial(templates.matrix);
-  makeTemplate();
+  await getPartial({filePath: templates.head, name: 'head.hbs'});
+  await getPartial({filePath: templates.body, name: 'body.hbs'});
+  await getPartial({filePath: templates.metrics, name: 'metrics.hbs'});
+  await getPartial({filePath: templates.table, name: 'table.hbs'});
+  await getPartial({filePath: templates.matrix, name: 'matrix.hbs'});
+  const template = makeTemplate();
+  template({context});
   return context;
 }
 

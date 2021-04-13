@@ -12,10 +12,10 @@ export const asyncReadDir = promisify(readdir);
 export const asyncWriteFile = promisify(writeFile);
 export const asyncReadFile = promisify(readFile);
 
-export const getPartial = async file => {
+export const getPartial = async ({filePath, name}) => {
   const partial = await asyncReadFile(
-    join(__dirname, file), 'utf8');
-  return Handlebars.registerPartial(file, partial);
+    join(__dirname, filePath), 'utf8');
+  return Handlebars.registerPartial(name, partial);
 };
 
 /**
