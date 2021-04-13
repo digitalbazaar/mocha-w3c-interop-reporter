@@ -4,9 +4,16 @@
 'use strict';
 
 require = require('esm')(module);
-const mocha = require('mocha');
+const Mocha = require('mocha');
 
-exports = module.exports = InteropReporter;
+const {
+  EVENT_RUN_BEGIN,
+  EVENT_RUN_END,
+  EVENT_TEST_FAIL,
+  EVENT_TEST_PASS,
+  EVENT_SUITE_BEGIN,
+  EVENT_SUITE_END
+} = Mocha.Runner.constants;
 
 // WARNING: only compatible with mocha >=  6.0.0
 // requires a manual import (see test-mocha.js)
@@ -20,7 +27,7 @@ exports = module.exports = InteropReporter;
  */
 function InteropReporter(runner, options) {
   // inherit the base Mocha reporter
-  mocha.reporters.Base.call(this, runner, options);
+  Mocha.reporters.Base.call(this, runner, options);
   const report = {};
   // add new fields for the final report here.
   function formatTest(test, parentSuite = '') {
@@ -51,23 +58,31 @@ function InteropReporter(runner, options) {
       }
     });
   }
-  runner.on(mocha.Runner.constants.EVENT_SUITE_BEGIN, function(suite) {
+  runner.once(EVENT_RUN_BEGIN, () => {
+    console.log('TEST STARTED');
+  }).on(EVENT_SUITE_BEGIN, function(suite) {
+    if(!suite.title) {
+      return;
+    }
+    console.log('SUITE BEGUN', suite.title);
     // the parent suite will setup the report structure.
     if(!suite.parent) {
       suite.suites.forEach(s => {
         report[s.title] = [];
       });
     }
-  });
-  runner.on(mocha.Runner.constants.EVENT_SUITE_END, function(suite) {
+  }).on(EVENT_SUITE_END, function(suite) {
     // we only want the top level commands.
     const topSuites = Object.keys(report);
     if(topSuites.includes(suite.title)) {
       report[suite.title] = report[suite.title].concat(suite.tests);
       addSubTests(suite.suites, suite.title);
     }
-  });
-  runner.on(mocha.Runner.constants.EVENT_RUN_END, function() {
+  }).on(EVENT_TEST_PASS, test => {
+    console.log(`pass: ${test.fullTitle()}`);
+  }).on(EVENT_TEST_FAIL, test => {
+    console.log(`fail: ${test.fullTitle()}`);
+  }).on(EVENT_RUN_END, function() {
     try {
       Object.keys(report).forEach(name => {
         // create a function for each test under this name
@@ -83,3 +98,6 @@ function InteropReporter(runner, options) {
     }
   });
 }
+
+exports = module.exports = InteropReporter;
+
