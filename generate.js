@@ -25,14 +25,7 @@ async function makeMaster(masterName) {
   await getPartial(templates.head);
   await getPartial(templates.body);
   await getPartial(templates.report);
-  const files = await getJSONFiles(testConfig.dirs.results);
   const masterFile = `${masterName}-report.json`;
-  const masterPath = files.find(f => f === masterFile);
-  if(!masterPath) {
-    throw new Error(`Unable to find json report at ${masterPath}` +
-      `for ${masterName}. This file is used to generate` +
-      'the report and is set in test.json');
-  }
   const masterJson = require(path.join(__dirname, masterFile));
   const testNames = Object.keys(masterJson);
   testNames.forEach(name => {
