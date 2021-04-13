@@ -22,7 +22,9 @@ async function makeReport({fileName, report}) {
   // from disk into handlebars
   await getPartial(templates.head);
   await getPartial(templates.body);
-  await getPartial(templates.report);
+  await getPartial(templates.metrics);
+  await getPartial(templates.table);
+  await getPartial(templates.matrix);
   makeTemplate();
   return context;
 }
