@@ -1,6 +1,6 @@
 const pending = '-';
 const passing = '✓';
-const failed = '✓';
+const failed = '❌';
 
 module.exports = {
   pending,
