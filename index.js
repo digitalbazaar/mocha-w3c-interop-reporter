@@ -8,8 +8,8 @@ const Mocha = require('mocha');
 const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
+
 const {
-  EVENT_RUN_BEGIN,
   EVENT_RUN_END,
   EVENT_TEST_FAIL,
   EVENT_TEST_PASS,
@@ -40,6 +40,8 @@ function InteropReporter(runner, options) {
       .replace(parentSuite, '')
       .trim();
     return {
+      // optional means the test is non-normative
+      optional: false,
       ...test,
       fullTitle,
       title: test.title.replace(/\s\s/g, ''),
@@ -56,16 +58,17 @@ function InteropReporter(runner, options) {
     });
   }
   runner.on(EVENT_SUITE_BEGIN, function(suite) {
+    // the parent suite will setup the report structure.
+    if(!suite.parent) {
+      const [rootSuite] = suite.suites;
+      rootSuite.suites.forEach(s => {
+        report[s.title] = [];
+      });
+    }
     if(!suite.title) {
       return;
     }
     console.log(spaces(parents(suite) * 2), suite.title);
-    // the parent suite will setup the report structure.
-    if(!suite.parent) {
-      suite.suites.forEach(s => {
-        report[s.title] = [];
-      });
-    }
   }).on(EVENT_SUITE_END, function(suite) {
     // we only want the top level commands.
     const topSuites = Object.keys(report);
@@ -87,7 +90,7 @@ function InteropReporter(runner, options) {
           .map(formatter)
           .sort((a, b) => a.optional - b.optional);
       });
-      console.log(JSON.stringify(report, null, 2));
+      console.log('reports on', Object.keys(report));
     } catch(e) {
       console.error(e);
     }
