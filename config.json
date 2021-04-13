@@ -4,7 +4,7 @@
     "report": "../report"
   },
   "respecConfig": {
-
+    "shortName": "shortName"
   },
   "templates": {
     "body": "./body.hsbs'",
