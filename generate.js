@@ -22,11 +22,13 @@ async function makeReport({fileName, report}) {
     ],
     respecConfig: JSON.stringify(respecConfig)
   };
+/*
   for(const key in report) {
     const suite = report[key];
     console.log(Object.keys(suite));
     console.log(Object.keys(suite[0]));
   }
+*/
   // go ahead and load these partial templates
   // from disk into handlebars
   await getPartial({filePath: templates.head, name: 'head.hbs'});
@@ -37,7 +39,7 @@ async function makeReport({fileName, report}) {
   const template = makeTemplate();
   const result = template(context);
 console.log(result);
-  return context;
+  return result;
 }
 
 module.exports = {
