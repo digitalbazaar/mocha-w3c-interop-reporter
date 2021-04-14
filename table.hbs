@@ -1,9 +1,10 @@
 <section class="informative">
+  <!--Table-->
   <h1>{{table.title}}</h1>
   <p>
     The results are shown below:
   </p>
-      {{#each tests}}
+      {{#each table.tests}}
         <section>
           <h2>{{@key}}</h2>
           <table class="simple">
@@ -17,21 +18,17 @@
             </style>
             <thead>
               <th width="80%">Test</th>
-                {{#each @root.columnNames}}
+                {{#each table.columnNames}}
                   <th>{{this}}</th>
                 {{/each}} 
             </thead>
             <tbody>
-        {{#each this}}
           <tr>
             <!--This is the name of the test-->
-            <td class="subtest">{{@key}}</td>
-            {{#each this}}
-              <!--These contain if the test passed, failed, or was skipped-->
-              <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
-            {{/each}}
+            <td class="subtest">{{title}}</td>
+            <!--These contain if the test passed, failed, or was skipped-->
+            <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
           </tr>
-        {{/each}}
           </tbody>
           </table>
         </section>

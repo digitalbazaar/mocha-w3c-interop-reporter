@@ -1,4 +1,10 @@
-<section class="informative">
+<div class="test-data">
   {{context}}
   <!--- This will take the tests and display them as matric or table -->
-</section>
+  {{#each tables}}
+    {{> table.hbs table=.}}
+  {{/each}}
+  {{#each matrices}}
+    {{> matrix.hbs matrix=.}}
+  {{/each}}
+</div>
