@@ -25,7 +25,8 @@
     "chalk": "^4.1.0",
     "esm": "^3.2.25",
     "handlebars": "^4.7.7",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "^7.24.0",
