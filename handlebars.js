@@ -15,10 +15,6 @@ Handlebars.registerHelper('getStatusMark', state => {
 Handlebars.registerHelper(
   'getOptional', optional => optional ? 'optional' : 'not-optional');
 
-Handlebars.registerHelper(
-  'getOptionalTitle',
-  title => /optional/i.test(title) ? 'optional' : 'not-optional');
-
 const makeTemplate = () => {
   const template = Handlebars.template;
   const templates = Handlebars.templates = Handlebars.templates || {};
@@ -30,13 +26,35 @@ const makeTemplate = () => {
         let stack1;
         return '<!DOCTYPE html>\n<html>\n  <head>\n' +
       ((stack1 = container.invokePartial(
-        partials['head.hbs'], depth0, {name: 'head.hbs', data, indent: '    ', helpers, partials, decorators: container.decorators})) != null ? stack1 : '') +
+        partials['head.hbs'], depth0, {
+          name: 'head.hbs',
+          data,
+          indent: '    ',
+          helpers,
+          partials,
+          decorators: container.decorators
+        })) != null ? stack1 : '') +
       '  </head>\n  <body>\n' +
       ((stack1 = container.invokePartial(
-        partials['body.hbs'], depth0, {name: 'body.hbs', data, indent: '    ', helpers, partials, decorators: container.decorators})) != null ? stack1 : '') +
-      ((stack1 = container.invokePartial(partials['metrics.hbs'], depth0, {name: 'metrics.hbs', data, indent: '    ', helpers, partials, decorators: container.decorators})) != null ? stack1 : '') +
+        partials['body.hbs'], depth0, {
+          name: 'body.hbs',
+          data,
+          indent: '    ',
+          helpers,
+          partials,
+          decorators: container.decorators
+        })) != null ? stack1 : '') +
+      ((stack1 = container.invokePartial(
+        partials['metrics.hbs'], depth0, {
+          name: 'metrics.hbs',
+          data,
+          indent: '    ',
+          helpers,
+          partials,
+          decorators: container.decorators
+        })) != null ? stack1 : '') +
       '  </body>\n</html>\n';
-  }, usePartial: true, useData: true});
+      }, usePartial: true, useData: true});
   return templates['report-template.hbs'];
-}
+};
 module.exports = {makeTemplate};

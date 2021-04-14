@@ -31,6 +31,7 @@ function InteropReporter(runner, options) {
   // inherit the base Mocha reporter
   Mocha.reporters.Base.call(this, runner, options);
   const report = {};
+  const reports = new Set();
   // add new fields for the final report here.
   function formatTest(test, parentSuite = '') {
     // remove line breaks and the parentSuite name
@@ -78,6 +79,7 @@ function InteropReporter(runner, options) {
   }).on(EVENT_SUITE_END, function(suite) {
     // if a suite is a report then get all the test results for it
     if(suite.report === true) {
+      reports.add(suite);
       report[suite.title] = report[suite.title].concat(suite.tests);
       // a report can have describe statements in it we need subtests from
       addSubTests(suite.suites, suite.title);
@@ -97,6 +99,7 @@ function InteropReporter(runner, options) {
           .sort((a, b) => a.optional - b.optional);
       });
       console.log('reports on', Object.keys(report));
+      console.log('set of', reports);
       const result = await makeReport({fileName: 'report.html', report});
       console.log('Generated new report.', result);
     } catch(e) {

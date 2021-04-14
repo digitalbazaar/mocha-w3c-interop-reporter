@@ -1,7 +1,7 @@
 <section class="informative">
   <h1>{{table.title}}</h1>
   <p>
-    The results of the conformance testing are shown below:
+    The results are shown below:
   </p>
       {{#each tests}}
         <section>
@@ -17,15 +17,17 @@
             </style>
             <thead>
               <th width="80%">Test</th>
-                {{#each @root.implementations}}
+                {{#each @root.columnNames}}
                   <th>{{this}}</th>
                 {{/each}} 
             </thead>
             <tbody>
         {{#each this}}
           <tr>
-            <td class="subtest {{getOptionalTitle @key}}">{{@key}}</td>
+            <!--This is the name of the test-->
+            <td class="subtest">{{@key}}</td>
             {{#each this}}
+              <!--These contain if the test passed, failed, or was skipped-->
               <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
             {{/each}}
           </tr>
