@@ -5,6 +5,7 @@
 
 require = require('esm')(module);
 const Mocha = require('mocha');
+const uuid = require('uuid');
 const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
@@ -57,9 +58,15 @@ function InteropReporter(runner, options) {
       }
     });
   }
+  // add a testId to suite and test
+  ['suite', 'test'].forEach(type => {
+    runner.on(type, item => {
+      item._testId = `urn:uuid:${uuid.v4()}`;
+    });
+  });
   runner.on(EVENT_SUITE_BEGIN, function(suite) {
-    // the parent suite will setup the report structure.
-    if(!suite.parent) {
+    // the rootSuite will setup the report structure.
+    if(!suite.parent && suite.suites.length) {
       const [rootSuite] = suite.suites;
       rootSuite.suites.forEach(s => {
         report[s.title] = [];
@@ -70,10 +77,10 @@ function InteropReporter(runner, options) {
     }
     console.log(spaces(parents(suite) * 2), suite.title);
   }).on(EVENT_SUITE_END, function(suite) {
-    // we only want the top level commands.
-    const topSuites = Object.keys(report);
-    if(topSuites.includes(suite.title)) {
+    // if a suite is a report then get all the test results for it
+    if(suite.report === true) {
       report[suite.title] = report[suite.title].concat(suite.tests);
+      // a report can have describe statements in it we need subtests from
       addSubTests(suite.suites, suite.title);
     }
   }).on(EVENT_TEST_PASS, test => {
