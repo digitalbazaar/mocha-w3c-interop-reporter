@@ -7,6 +7,7 @@ import Handlebars from 'handlebars';
 import {join} from 'path';
 import {writeFile, readdir, readFile} from 'fs';
 import {promisify} from 'util';
+import {testProps} from './constants.js';
 
 export const asyncReadDir = promisify(readdir);
 export const asyncWriteFile = promisify(writeFile);
@@ -52,4 +53,17 @@ export async function getDirFiles(path) {
 export async function getJSONFiles(path) {
   const strings = await getDirFiles(path);
   return strings.map(JSON.parse);
+}
+
+/**
+ * Writes a json file to disc.
+ *
+ * @param {object} options - Options to use.
+ * @param {string} options.path - A path to write to.
+ * @param {object} options.data - A JSON Object.
+ *
+ * @returns {Promise} Resolves on write.
+ */
+export async function writeJSON({path, data, replacer = testProps}) {
+  return asyncWriteFile(path, JSON.stringify(data, replacer, 2));
 }

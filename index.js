@@ -50,10 +50,10 @@ function InteropReporter(runner, options) {
   }
   // recurse through suites collecting all their finished tests.
   function addSubTests(suites, title) {
-    suites.forEach(s => {
-      report[title] = report[title].concat(s.tests);
-      if(s.suites.length) {
-        addSubTests(s.suites, title);
+    suites.forEach(suite => {
+      report[title] = report[title].concat(suite.tests);
+      if(suite.suites.length) {
+        addSubTests(suite.suites, title);
       }
     });
   }
