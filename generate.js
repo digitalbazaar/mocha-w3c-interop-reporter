@@ -8,27 +8,14 @@
  */
 const testConfig = require('./config.json');
 const {makeTemplate} = require('./handlebars');
-const {writeJSON, getPartial} = require('./files.js');
+const {getPartial} = require('./files.js');
+const {findReports, makeTemplateContext} = require('./handlers');
 
-//masterName is the name of the main report
-//used to get the title of all tests for the spec
-async function makeReport({fileName, report}) {
+async function makeReport({suite}) {
   const {templates, respecConfig} = testConfig;
-  const context = {
-    matrices: [],
-    tables: [
-      {title: 'one', columnNames: ['col one'], tests: [{state: 'passed', optional: false}]},
-      {title: 'two', columnNames: ['one'], tests: []}
-    ],
-    respecConfig: JSON.stringify(respecConfig)
-  };
-/*
-  for(const key in report) {
-    const suite = report[key];
-    console.log(Object.keys(suite));
-    console.log(Object.keys(suite[0]));
-  }
-*/
+  const reports = findReports({suite});
+  const context = makeTemplateContext({reports});
+  context.respecConfig = JSON.stringify(respecConfig);
   // go ahead and load these partial templates
   // from disk into handlebars
   await getPartial({filePath: templates.head, name: 'head.hbs'});
@@ -38,7 +25,6 @@ async function makeReport({fileName, report}) {
   await getPartial({filePath: templates.matrix, name: 'matrix.hbs'});
   const template = makeTemplate();
   const result = template(context);
-console.log(result);
   return result;
 }
 
