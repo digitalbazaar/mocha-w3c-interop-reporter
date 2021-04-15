@@ -72,8 +72,9 @@ export function makeRows({tests, columns}) {
   }, []);
 }
 
-export function makeMatrix({columns = [], tests = []}) {
+export function makeMatrix({title, columns = [], tests = []}) {
   return {
+    title,
     columns,
     rows: makeRows({tests, columns})
   };
