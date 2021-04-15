@@ -45,6 +45,41 @@ export function findReports({suite, reports = new Set()}) {
 }
 
 /**
+ * Turns an Array of tests into rows and cells.
+ *
+ * @param {object} options - Options to use.
+ * @param {Array<object>} options.tests - An array of tests.
+ * @param {Array<string>} options.columns - An array of strings.
+ *
+ * @returns {Array<object>} - An array of rows with cells.
+*/
+export function makeRows({tests, columns}) {
+  return tests.reduce((rows, current) => {
+    // if we get dirty data ignore it
+    if(!current.cell) {
+      return rows;
+    }
+    const [rowId, columnId] = current.cell;
+    const columnIndex = columns.indexOf(columnId);
+    let row = rows.find(f => f.id === rowId);
+    if(!row) {
+      row = {id: rowId, cells: []};
+      rows.push(row);
+    }
+    // ensures a cell lines up with its row when rendered
+    row.cells[columnIndex] = current;
+    return rows;
+  }, []);
+}
+
+export function makeMatrix({columns = [], tests = []}) {
+  return {
+    columns: ['', ...columns],
+    rows: makeRows({tests, columns})
+  };
+}
+
+/**
  * Turns a set of Reports into either matrixies or tables
  * that can be templated into html reports.
  *
@@ -55,11 +90,18 @@ export function findReports({suite, reports = new Set()}) {
  *  template.
 */
 export function makeTemplateContext({reports}) {
+  const context = {
+    matrices: [],
+    tables: []
+  };
   for(const report of reports) {
     const tests = addSubTests({tests: report.tests, suites: report.suites});
     report.tests = tests;
-    console.log(report);
+    if(report.matrix) {
+      context.matrices.push(makeMatrix(report));
+    }
   }
+  return context;
 }
 
 export function formatTest(test, parentSuite = '') {

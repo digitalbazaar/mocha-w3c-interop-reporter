@@ -4,7 +4,6 @@
   <p>
     The results are shown below:
   </p>
-      {{#each row}}
         <section>
           <h2>{{@key}}</h2>
           <table class="simple">
@@ -18,21 +17,22 @@
             </style>
             <thead>
               <th width="80%">Test</th>
-                {{#each @root.implementations}}
+                {{#each matrix.columns}}
                   <th>{{this}}</th>
                 {{/each}} 
             </thead>
             <tbody>
-        {{#each this}}
-          <tr>
-            <td class="subtest {{getOptionalTitle @key}}">{{@key}}</td>
-            {{#each this}}
-              <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
-            {{/each}}
-          </tr>
-        {{/each}}
+          {{#each matrix.rows}}
+            <tr>
+              <!--This is the name of the test-->
+              <td class="subtest">{{id}}</td>
+              <!--These contain if the test passed, failed, or was skipped-->
+              {{#each cells}}
+                <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
+              {{/each}}
+            </tr>
+          {{/each}}
           </tbody>
           </table>
         </section>
-      {{/each}}
 </section>

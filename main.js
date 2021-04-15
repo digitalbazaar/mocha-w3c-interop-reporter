@@ -10,7 +10,6 @@ const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
 const {formatTest} = require('./handlers');
-const {writeJSON} = require('./files');
 
 const {
   EVENT_RUN_END,
@@ -50,11 +49,6 @@ function InteropReporter(runner, options) {
     }
     console.log(spaces(parents(suite) * 2), suite.title);
   }).on(EVENT_SUITE_END, function(suite) {
-/* FIXME do not include in release
-    if(suite.root) {
-      writeJSON({path: './report.log', data: suite}).then(console.log, console.error);
-    }
-*/
     // if a suite is a report then get all the test results for it
     if(suite.report === true) {
       // FIXME this is what we want, but don't have yet
