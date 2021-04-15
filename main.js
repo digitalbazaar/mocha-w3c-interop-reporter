@@ -9,6 +9,8 @@ const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
+const {writeJSON} = require('./files');
+
 const {
   EVENT_RUN_END,
   EVENT_TEST_FAIL,

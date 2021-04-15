@@ -7,7 +7,6 @@ import Handlebars from 'handlebars';
 import {join} from 'path';
 import {writeFile, readdir, readFile} from 'fs';
 import {promisify} from 'util';
-import {testProps} from './constants.js';
 
 export const asyncReadDir = promisify(readdir);
 export const asyncWriteFile = promisify(writeFile);
@@ -55,15 +54,26 @@ export async function getJSONFiles(path) {
   return strings.map(JSON.parse);
 }
 
+const noCircular = (key, value) => {
+  const circular = ['ctx', 'parent'];
+  if(circular.includes(key)) {
+    // replace circular refs with their id or null
+    return value.id || null;
+  }
+  return value;
+};
+
 /**
  * Writes a json file to disc.
  *
  * @param {object} options - Options to use.
  * @param {string} options.path - A path to write to.
  * @param {object} options.data - A JSON Object.
+ * @param {Array<string>|Function} [options.replacer=noCircular] -
+ *  A JSON replacer usually for circular references.
  *
  * @returns {Promise} Resolves on write.
  */
-export async function writeJSON({path, data, replacer = testProps}) {
+export async function writeJSON({path, data, replacer = noCircular}) {
   return asyncWriteFile(path, JSON.stringify(data, replacer, 2));
 }
