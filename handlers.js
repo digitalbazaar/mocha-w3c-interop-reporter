@@ -74,7 +74,7 @@ export function makeRows({tests, columns}) {
 
 export function makeMatrix({columns = [], tests = []}) {
   return {
-    columns: ['', ...columns],
+    columns,
     rows: makeRows({tests, columns})
   };
 }
