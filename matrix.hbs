@@ -1,37 +1,31 @@
-<section class="informative">
-  <!--Matrix-->
-  <h1>{{matrix.title}}</h1>
-  <p>
-    The results are shown below:
-  </p>
-        <section>
-          <table class="simple">
-            <style>
-              td.subtest {
-                padding-left: 2rem;
-              }
-              td.optional {
-                background-color: #b9b7b7;
-              }
-            </style>
-            <thead>
-              <th width="80%">Test</th>
-                {{#each matrix.columns}}
-                  <th>{{this}}</th>
-                {{/each}} 
-            </thead>
-            <tbody>
-          {{#each matrix.rows}}
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">{{id}}</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-              {{#each cells}}
-                <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
-              {{/each}}
-            </tr>
-          {{/each}}
-          </tbody>
-          </table>
-        </section>
+<section>
+  <h2>{{matrix.title}}</h2>
+  <table class="simple">
+    <style>
+      td.subtest {
+        padding-left: 2rem;
+      }
+      td.optional {
+        background-color: #b9b7b7;
+      }
+    </style>
+    <thead>
+      <th width="80%">Test</th>
+        {{#each matrix.columns}}
+          <th>{{this}}</th>
+        {{/each}} 
+    </thead>
+    <tbody>
+  {{#each matrix.rows}}
+    <tr>
+      <!--This is the name of the test-->
+      <td class="subtest">{{id}}</td>
+      <!--These contain if the test passed, failed, or was skipped-->
+      {{#each cells}}
+        <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
+      {{/each}}
+    </tr>
+  {{/each}}
+  </tbody>
+  </table>
 </section>

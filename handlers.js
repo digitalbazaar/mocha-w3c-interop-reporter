@@ -59,7 +59,7 @@ export function makeRows({tests, columns}) {
     if(!current.cell) {
       return rows;
     }
-    const [rowId, columnId] = current.cell;
+    const {columnId, rowId} = current.cell;
     const columnIndex = columns.indexOf(columnId);
     let row = rows.find(f => f.id === rowId);
     if(!row) {
@@ -81,7 +81,7 @@ export function makeMatrix({title, columns = [], tests = []}) {
 }
 
 /**
- * Turns a set of Reports into either matrixies or tables
+ * Turns a set of Reports into matrices
  * that can be templated into html reports.
  *
  * @param {object} options - Options to use.
