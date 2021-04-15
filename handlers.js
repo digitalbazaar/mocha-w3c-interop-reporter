@@ -8,20 +8,58 @@
  * comprehensive array of tests.
  *
  * @param {object} options - Options to use.
- * @param {object} options.report - A report.
+ * @param {Array<object>} options.tests - An array of tests.
  * @param {Array<object>} options.suites - An array of suites.
- * @param {string} options.title - The title of the suite.
  *
  * @returns {object} The report.
 */
-export function addSubTests({report, suites, title}) {
+export function addSubTests({tests, suites}) {
   for(const suite of suites) {
-    report[title] = report[title].concat(suite.tests);
+    tests = tests.concat(suite.tests);
     if(suite.suites.length) {
-      addSubTests({report, suites: suite.suites, title});
+      addSubTests({tests, suites: suite.suites});
     }
   }
-  return report;
+  return tests;
+}
+
+/**
+ * Given an initial suite finds all reports.
+ *
+ * @param {object} options - Options to use.
+ * @param {object} options.suite - Usually the initial suite.
+ * @param {Set} [options.reports= new Set()] - A set to store the reports in.
+ *
+ * @returns {Set} The resulting reports.
+*/
+export function findReports({suite, reports = new Set()}) {
+  for(const _suite of suite.suites) {
+    if(_suite.report === true) {
+      if(!reports.has(_suite)) {
+        reports.add(_suite);
+      }
+    }
+    findReports({suite: _suite, reports});
+  }
+  return reports;
+}
+
+/**
+ * Turns a set of Reports into either matrixies or tables
+ * that can be templated into html reports.
+ *
+ * @param {object} options - Options to use.
+ * @param {Set} options.reports - A set of mocha suites that are reports.
+ *
+ * @returns {object} - Returns an object with matrices & tables for the
+ *  template.
+*/
+export function makeTemplateContext({reports}) {
+  for(const report of reports) {
+    const tests = addSubTests({tests: report.tests, suites: report.suites});
+    report.tests = tests;
+    console.log(report);
+  }
 }
 
 export function formatTest(test, parentSuite = '') {

@@ -5,11 +5,19 @@
 
 require = require('esm')(module);
 
+const mochaResults = require('../raw-mocha-finished.json');
+const {findReports, makeTemplateContext} = require('../../handlers');
 const {makeReport} = require('../../generate');
 
 describe('generate', async function() {
+  let reports = null;
+  before(function() {
+    reports = findReports({suite: mochaResults});
+    const context = makeTemplateContext({reports});
+  });
   it('should render a table', async function() {
-    makeReport({});
+    //makeReport({});
+    //console.log(reports);
   });
   it('should render multiple tables', async function() {
 
