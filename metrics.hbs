@@ -1,9 +1,6 @@
 <div class="test-data">
   {{context}}
   <!--- This will take the tests and display them as matric or table -->
-  {{#each tables}}
-    {{> table.hbs table=.}}
-  {{/each}}
   {{#each matrices}}
     {{> matrix.hbs matrix=.}}
   {{/each}}
