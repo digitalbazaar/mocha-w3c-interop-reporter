@@ -9,7 +9,7 @@ const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
-const {writeJSON} = require('./files');
+const {formatTest, addSubTests} = require('./handlers');
 
 const {
   EVENT_RUN_END,
@@ -18,10 +18,6 @@ const {
   EVENT_SUITE_BEGIN,
   EVENT_SUITE_END
 } = Mocha.Runner.constants;
-
-// WARNING: only compatible with mocha >=  6.0.0
-// requires a manual import (see test-mocha.js)
-// manual import not required if this is an npm package
 
 /**
  * Custom Mocha Reporter for w3c test suites.
@@ -34,32 +30,6 @@ function InteropReporter(runner, options) {
   Mocha.reporters.Base.call(this, runner, options);
   const report = {};
   const reports = new Set();
-  // add new fields for the final report here.
-  function formatTest(test, parentSuite = '') {
-    // remove line breaks and the parentSuite name
-    const fullTitle = test
-      .fullTitle()
-      .replace(/\s\s/g, '')
-      .replace(parentSuite, '')
-      .trim();
-    return {
-      // optional means the test is non-normative
-      optional: false,
-      ...test,
-      fullTitle,
-      title: test.title.replace(/\s\s/g, ''),
-      errors: test.err ? test.err.message : '',
-    };
-  }
-  // recurse through suites collecting all their finished tests.
-  function addSubTests(suites, title) {
-    suites.forEach(suite => {
-      report[title] = report[title].concat(suite.tests);
-      if(suite.suites.length) {
-        addSubTests(suite.suites, title);
-      }
-    });
-  }
   // add a testId to suite and test
   ['suite', 'test'].forEach(type => {
     runner.on(type, item => {
@@ -81,10 +51,11 @@ function InteropReporter(runner, options) {
   }).on(EVENT_SUITE_END, function(suite) {
     // if a suite is a report then get all the test results for it
     if(suite.report === true) {
+      // FIXME this is what we want, but don't have yet
       reports.add(suite);
       report[suite.title] = report[suite.title].concat(suite.tests);
       // a report can have describe statements in it we need subtests from
-      addSubTests(suite.suites, suite.title);
+      addSubTests({report, suites: suite.suites, title: suite.title});
     }
   }).on(EVENT_TEST_PASS, test => {
     console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);

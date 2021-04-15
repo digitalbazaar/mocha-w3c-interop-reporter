@@ -28,8 +28,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:96930169-b54b-42d9-ab3d-6b3f8eb5f376",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 1062,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 457,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -44,8 +59,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:c96c2399-b022-4437-8f01-8d699daf53f1",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 1521,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1559,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -60,8 +90,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:42af0866-c231-4ff9-abde-b9667ea5d514",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 3080,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 327,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -76,8 +121,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:8d54466d-9750-4a95-9b73-b863a76f2777",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 3408,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 959,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -92,8 +152,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:37ffb999-fae7-4b3e-978d-63389e08dbf6",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 4368,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1999,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -108,8 +183,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:6839cb66-978f-4f88-9c87-5b2b22e83546",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 6368,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 173,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -124,8 +214,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:b53fed63-16cf-4dca-9607-a98226aa16eb",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 6542,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 970,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -140,8 +245,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
-                  "ctx": null
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
+                  "ctx": null,
+                  "_testId": "urn:uuid:37197b94-fe6b-4b34-85bd-b3fb24df0c42",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 7513,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 191,
+                  "state": "passed",
+                  "speed": "slow"
                 }
               ],
               "root": false,
@@ -150,7 +270,7 @@
               "_beforeEach": [],
               "_beforeAll": [
                 {
-                  "title": "\"before all\" hook",
+                  "title": "\"before all\" hook in \"Danube Tech\"",
                   "body": "async function() {\n            try {\n              // set the display name for this row\n              this.test.parent.rowName = issuer.name;\n              // ensure this implementation is a column in the matrix\n              columnNames.push(issuer.name);\n              const implementation = new Implementation(issuer);\n              const response = await implementation.issue(\n                {credential: certificate});\n              should.exist(response);\n              // this credential is not tested\n              // we just send it to each verifier\n              credential = response.data;\n            } catch(e) {\n              console.error(`${issuer.name} failed to issue a ` +\n                'credential for verification tests', e);\n              throw e;\n            }\n          }",
                   "async": 0,
                   "sync": true,
@@ -161,9 +281,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "type": "hook",
-                  "parent": "21ocPzftMSAqPjSkM9lXF",
+                  "parent": "_QSiqBrnrDXRlo6DEueRK",
                   "ctx": null,
-                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+                  "originalTitle": "\"before all\" hook",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 552,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 509,
+                  "_error": null
                 }
               ],
               "_afterEach": [],
@@ -176,8 +310,10 @@
               "delayed": false,
               "_events": {},
               "_eventsCount": 1,
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "parent": "5xwcLEn61POMiG9X8BztZ",
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "_testId": "urn:uuid:3c0098e9-e042-4d78-8fb8-67db702a12de",
+              "rowName": "Danube Tech"
             },
             {
               "title": "Digital Bazaar",
@@ -197,8 +333,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:b4f6c95e-7d93-4eb8-9116-c28cb094cd9e",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 9389,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1057,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -213,8 +364,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:ada191c5-6d6f-4975-9d4d-0b80cccbc526",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 10447,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1180,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -229,8 +395,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:2e184ec8-bcc7-451c-8a5e-2f54102a95f2",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 11629,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 316,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -245,8 +426,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:86d9137a-739a-4da2-ac85-97c1847104e9",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 11946,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 2613,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -261,8 +457,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:6d97c333-40a8-4581-b8bc-81fb6006c8fb",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 14559,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 2206,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -277,8 +488,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:0d419ab9-dd4a-4523-8da8-e2ee610a8785",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 16765,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 676,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -293,8 +519,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:62aefa23-38fb-48e3-a552-558e1f1859be",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 17442,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 2482,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -309,8 +550,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
-                  "ctx": null
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
+                  "ctx": null,
+                  "_testId": "urn:uuid:5ffe4658-dc84-46d5-b867-5e7ac86a2012",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 19924,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 994,
+                  "state": "passed",
+                  "speed": "slow"
                 }
               ],
               "root": false,
@@ -319,7 +575,7 @@
               "_beforeEach": [],
               "_beforeAll": [
                 {
-                  "title": "\"before all\" hook",
+                  "title": "\"before all\" hook in \"Digital Bazaar\"",
                   "body": "async function() {\n            try {\n              // set the display name for this row\n              this.test.parent.rowName = issuer.name;\n              // ensure this implementation is a column in the matrix\n              columnNames.push(issuer.name);\n              const implementation = new Implementation(issuer);\n              const response = await implementation.issue(\n                {credential: certificate});\n              should.exist(response);\n              // this credential is not tested\n              // we just send it to each verifier\n              credential = response.data;\n            } catch(e) {\n              console.error(`${issuer.name} failed to issue a ` +\n                'credential for verification tests', e);\n              throw e;\n            }\n          }",
                   "async": 0,
                   "sync": true,
@@ -330,9 +586,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "type": "hook",
-                  "parent": "9bTDEbQfvN_H2eqmxvNO-",
+                  "parent": "lPDo4_e9hF9mDfWAoOypk",
                   "ctx": null,
-                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+                  "originalTitle": "\"before all\" hook",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 7705,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1683,
+                  "_error": null
                 }
               ],
               "_afterEach": [],
@@ -345,8 +615,10 @@
               "delayed": false,
               "_events": {},
               "_eventsCount": 1,
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "parent": "5xwcLEn61POMiG9X8BztZ",
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "_testId": "urn:uuid:b64e84cb-03a5-44e4-83fd-f110fb1fe035",
+              "rowName": "Digital Bazaar"
             },
             {
               "title": "Mattr Labs",
@@ -366,8 +638,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:f07ec4fc-1273-44f5-b23e-3dafb636175d",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 21610,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1236,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -382,8 +669,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:1bf4d502-1c92-472e-93ed-89b6136b809b",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 22847,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 818,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -398,8 +700,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:6998a6f7-c7c1-456f-b454-3ab523541e99",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 23666,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 222,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -414,8 +731,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:98de7794-7236-4e02-9643-395d4079bf66",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 23889,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 713,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -430,8 +762,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:023c54ac-485e-48c0-9338-b610f65ba907",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 24603,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1511,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -446,8 +793,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:3f65dec3-4786-412c-b911-94d2356005be",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 26115,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 143,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -462,8 +824,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:d0c0c6c0-083f-4b75-9b85-03c46a8d4bb8",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 26259,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 788,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -478,8 +855,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
-                  "ctx": null
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
+                  "ctx": null,
+                  "_testId": "urn:uuid:203b16cd-01c5-4dff-aab5-f84f60270da9",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 27047,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 180,
+                  "state": "passed",
+                  "speed": "slow"
                 }
               ],
               "root": false,
@@ -488,7 +880,7 @@
               "_beforeEach": [],
               "_beforeAll": [
                 {
-                  "title": "\"before all\" hook",
+                  "title": "\"before all\" hook in \"Mattr Labs\"",
                   "body": "async function() {\n            try {\n              // set the display name for this row\n              this.test.parent.rowName = issuer.name;\n              // ensure this implementation is a column in the matrix\n              columnNames.push(issuer.name);\n              const implementation = new Implementation(issuer);\n              const response = await implementation.issue(\n                {credential: certificate});\n              should.exist(response);\n              // this credential is not tested\n              // we just send it to each verifier\n              credential = response.data;\n            } catch(e) {\n              console.error(`${issuer.name} failed to issue a ` +\n                'credential for verification tests', e);\n              throw e;\n            }\n          }",
                   "async": 0,
                   "sync": true,
@@ -499,9 +891,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "type": "hook",
-                  "parent": "FQURPZMIY3_slLKmXdKY8",
+                  "parent": "mSwZ6-5-5fxiXErS7Yrod",
                   "ctx": null,
-                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+                  "originalTitle": "\"before all\" hook",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 20919,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 691,
+                  "_error": null
                 }
               ],
               "_afterEach": [],
@@ -514,8 +920,10 @@
               "delayed": false,
               "_events": {},
               "_eventsCount": 1,
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "parent": "5xwcLEn61POMiG9X8BztZ",
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "_testId": "urn:uuid:c5f3d272-4a24-4df5-b930-3c43f58431cf",
+              "rowName": "Mattr Labs"
             },
             {
               "title": "Mavennet",
@@ -535,8 +943,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:ca16677c-3c30-4e4d-9a7c-eced2c0885e0",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 28400,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 2401,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -551,8 +974,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:44fcb682-7421-440e-a4a6-fa5c6353e058",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 30802,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1148,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -567,8 +1005,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:c7fa3cf0-af24-49fd-8e85-ec31fc3595ea",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 31950,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 376,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -583,8 +1036,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:34b391a8-7b86-4a18-8cd0-5b88d71586a2",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 32327,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 2513,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -599,8 +1067,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:7409d052-28f0-4abb-9364-9b471d074f3f",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 34841,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1919,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -615,8 +1098,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:0222bcc4-c911-4bc8-a7a4-b2bea687d089",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 36762,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 828,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -631,8 +1129,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:9598ad51-6465-493b-9f49-9935e4a5a9db",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 37589,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1783,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -647,8 +1160,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
-                  "ctx": null
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
+                  "ctx": null,
+                  "_testId": "urn:uuid:f07f3d96-8e7e-453c-8116-6d2e458c24d2",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 39373,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 712,
+                  "state": "passed",
+                  "speed": "slow"
                 }
               ],
               "root": false,
@@ -657,7 +1185,7 @@
               "_beforeEach": [],
               "_beforeAll": [
                 {
-                  "title": "\"before all\" hook",
+                  "title": "\"before all\" hook in \"Mavennet\"",
                   "body": "async function() {\n            try {\n              // set the display name for this row\n              this.test.parent.rowName = issuer.name;\n              // ensure this implementation is a column in the matrix\n              columnNames.push(issuer.name);\n              const implementation = new Implementation(issuer);\n              const response = await implementation.issue(\n                {credential: certificate});\n              should.exist(response);\n              // this credential is not tested\n              // we just send it to each verifier\n              credential = response.data;\n            } catch(e) {\n              console.error(`${issuer.name} failed to issue a ` +\n                'credential for verification tests', e);\n              throw e;\n            }\n          }",
                   "async": 0,
                   "sync": true,
@@ -668,9 +1196,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "type": "hook",
-                  "parent": "gXecFRAPoXn5-1vM6bvv_",
+                  "parent": "XjmZU-fSfD7-9rAsl9WcG",
                   "ctx": null,
-                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+                  "originalTitle": "\"before all\" hook",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 27228,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1173,
+                  "_error": null
                 }
               ],
               "_afterEach": [],
@@ -683,8 +1225,10 @@
               "delayed": false,
               "_events": {},
               "_eventsCount": 1,
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "parent": "5xwcLEn61POMiG9X8BztZ",
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "_testId": "urn:uuid:58f57776-3cfa-4e00-8237-c5c2658c05ab",
+              "rowName": "Mavennet"
             },
             {
               "title": "mesur.io",
@@ -704,8 +1248,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:956b0efb-fab4-4314-836a-af3dc7533fd3",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 40217,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 132,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -720,8 +1279,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:1390d283-fd4d-4e79-8650-7038ea596545",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 40350,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 808,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -736,8 +1310,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:322169bf-ca5c-4f54-ae16-208bbf75c301",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 41160,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 242,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -752,8 +1341,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:2aa1e361-f8f2-4d62-9c36-e087d2664fe5",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 41403,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 699,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -768,8 +1372,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:51dd8d99-6f6f-4bed-964d-672187f381d2",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 42103,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1540,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -784,8 +1403,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:04e679f8-201d-45ce-b154-f1aa2ce972e0",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 43643,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 149,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -800,8 +1434,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:8ff249ab-fe27-420f-bfb6-3dfe73522b8b",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 43793,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 687,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -816,8 +1465,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
-                  "ctx": null
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
+                  "ctx": null,
+                  "_testId": "urn:uuid:7b8f2f53-8cda-4417-bd1c-a7351b61c198",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 44481,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 214,
+                  "state": "passed",
+                  "speed": "slow"
                 }
               ],
               "root": false,
@@ -826,7 +1490,7 @@
               "_beforeEach": [],
               "_beforeAll": [
                 {
-                  "title": "\"before all\" hook",
+                  "title": "\"before all\" hook in \"mesur.io\"",
                   "body": "async function() {\n            try {\n              // set the display name for this row\n              this.test.parent.rowName = issuer.name;\n              // ensure this implementation is a column in the matrix\n              columnNames.push(issuer.name);\n              const implementation = new Implementation(issuer);\n              const response = await implementation.issue(\n                {credential: certificate});\n              should.exist(response);\n              // this credential is not tested\n              // we just send it to each verifier\n              credential = response.data;\n            } catch(e) {\n              console.error(`${issuer.name} failed to issue a ` +\n                'credential for verification tests', e);\n              throw e;\n            }\n          }",
                   "async": 0,
                   "sync": true,
@@ -837,9 +1501,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "type": "hook",
-                  "parent": "NZQZHY3K24ipBI4sG5qYh",
+                  "parent": "eRZwOyut-s_hg-nEfrpRb",
                   "ctx": null,
-                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+                  "originalTitle": "\"before all\" hook",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 40085,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 132,
+                  "_error": null
                 }
               ],
               "_afterEach": [],
@@ -852,8 +1530,10 @@
               "delayed": false,
               "_events": {},
               "_eventsCount": 1,
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "parent": "5xwcLEn61POMiG9X8BztZ",
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "_testId": "urn:uuid:5c5cf425-645c-4560-8ebd-b50458174f71",
+              "rowName": "mesur.io"
             },
             {
               "title": "Spherity",
@@ -873,8 +1553,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:e590eacd-1cc5-407f-9e3f-d283364e1e55",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 46350,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1680,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -889,8 +1584,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:bc71fbea-fcbf-4711-b940-929fd2f24a14",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 48031,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 821,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -905,8 +1615,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:ec560d3f-d07e-4d7c-8835-51c909424cd8",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 48853,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 226,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -921,8 +1646,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:88fbd16c-ecee-4a39-8122-f4bcfa56fe63",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 49080,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 695,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -937,8 +1677,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:59400f42-1eee-43df-a7bc-42c66d69501f",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 49775,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1464,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -953,8 +1708,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:b66125b3-895f-4d9f-a59e-343bd48d5133",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 51240,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 147,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -969,8 +1739,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:1846b9e1-7f8e-489d-bb15-c99c588653dc",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 51388,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 692,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -985,8 +1770,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
-                  "ctx": null
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
+                  "ctx": null,
+                  "_testId": "urn:uuid:6d1a5ead-556d-40f7-bcb4-653ccd3dea48",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 52081,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 212,
+                  "state": "passed",
+                  "speed": "slow"
                 }
               ],
               "root": false,
@@ -995,7 +1795,7 @@
               "_beforeEach": [],
               "_beforeAll": [
                 {
-                  "title": "\"before all\" hook",
+                  "title": "\"before all\" hook in \"Spherity\"",
                   "body": "async function() {\n            try {\n              // set the display name for this row\n              this.test.parent.rowName = issuer.name;\n              // ensure this implementation is a column in the matrix\n              columnNames.push(issuer.name);\n              const implementation = new Implementation(issuer);\n              const response = await implementation.issue(\n                {credential: certificate});\n              should.exist(response);\n              // this credential is not tested\n              // we just send it to each verifier\n              credential = response.data;\n            } catch(e) {\n              console.error(`${issuer.name} failed to issue a ` +\n                'credential for verification tests', e);\n              throw e;\n            }\n          }",
                   "async": 0,
                   "sync": true,
@@ -1006,9 +1806,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "type": "hook",
-                  "parent": "1uiNJihm2a4WlLV9rT6Od",
+                  "parent": "z8xZjR-b1tSx9qMgDdBYc",
                   "ctx": null,
-                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+                  "originalTitle": "\"before all\" hook",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 44696,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1654,
+                  "_error": null
                 }
               ],
               "_afterEach": [],
@@ -1021,8 +1835,10 @@
               "delayed": false,
               "_events": {},
               "_eventsCount": 1,
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "parent": "5xwcLEn61POMiG9X8BztZ",
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "_testId": "urn:uuid:5ba4217b-7713-46a2-bcf5-97f1d2e80c14",
+              "rowName": "Spherity"
             },
             {
               "title": "Transmute",
@@ -1042,8 +1858,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:f58290a6-a982-44e4-84f4-e9b6914da2b6",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 52452,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 161,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -1058,8 +1889,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:817d1ba1-eca1-4554-9000-2845bf6f01fe",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 52613,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 808,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -1074,8 +1920,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:3970544c-2df1-425c-b8db-3b7b17dcd935",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 53421,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 160,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -1090,8 +1951,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:bdc6290b-5b01-4809-b114-ca9494b01fdb",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 53582,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 735,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -1106,8 +1982,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:ebc7806f-be19-4131-be6b-41dfa90b217e",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 54317,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 1479,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -1122,8 +2013,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:991925ed-0a93-4a11-88e5-3edc8961780d",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 55796,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 151,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -1138,8 +2044,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:e0b841e7-68d8-41aa-b66f-8bbd506c3dd2",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 55947,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 701,
+                  "state": "passed",
+                  "speed": "slow"
                 },
                 {
                   "type": "test",
@@ -1154,8 +2075,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
-                  "ctx": null
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
+                  "ctx": null,
+                  "_testId": "urn:uuid:3347a602-aa3d-410c-98f8-b8ce3d2d1fcd",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 56649,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 179,
+                  "state": "passed",
+                  "speed": "slow"
                 }
               ],
               "root": false,
@@ -1164,7 +2100,7 @@
               "_beforeEach": [],
               "_beforeAll": [
                 {
-                  "title": "\"before all\" hook",
+                  "title": "\"before all\" hook in \"Transmute\"",
                   "body": "async function() {\n            try {\n              // set the display name for this row\n              this.test.parent.rowName = issuer.name;\n              // ensure this implementation is a column in the matrix\n              columnNames.push(issuer.name);\n              const implementation = new Implementation(issuer);\n              const response = await implementation.issue(\n                {credential: certificate});\n              should.exist(response);\n              // this credential is not tested\n              // we just send it to each verifier\n              credential = response.data;\n            } catch(e) {\n              console.error(`${issuer.name} failed to issue a ` +\n                'credential for verification tests', e);\n              throw e;\n            }\n          }",
                   "async": 0,
                   "sync": true,
@@ -1175,9 +2111,23 @@
                   "_currentRetry": 0,
                   "pending": false,
                   "type": "hook",
-                  "parent": "Bb3sYlI1LeNs6QThV4dxk",
+                  "parent": "ZocqMrP_17Ksq4vfGibuq",
                   "ctx": null,
-                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+                  "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+                  "originalTitle": "\"before all\" hook",
+                  "_events": {},
+                  "_eventsCount": 1,
+                  "timer": {
+                    "_idleTimeout": -1,
+                    "_idlePrev": null,
+                    "_idleNext": null,
+                    "_idleStart": 52294,
+                    "_onTimeout": null,
+                    "_repeat": null,
+                    "_destroyed": true
+                  },
+                  "duration": 157,
+                  "_error": null
                 }
               ],
               "_afterEach": [],
@@ -1190,8 +2140,10 @@
               "delayed": false,
               "_events": {},
               "_eventsCount": 1,
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "parent": "5xwcLEn61POMiG9X8BztZ",
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "_testId": "urn:uuid:3e0ed6e6-e34d-4781-9186-4ccb4fdf70bc",
+              "rowName": "Transmute"
             }
           ],
           "tests": [],
@@ -1201,7 +2153,7 @@
           "_beforeEach": [],
           "_beforeAll": [
             {
-              "title": "\"before all\" hook",
+              "title": "\"before all\" hook in \"Yellow fever\"",
               "body": "function() {\n        // this will tell the report\n        // to make an interop matrix with these results\n        this.test.parent.matrix = true;\n        this.test.parent.report = true;\n        this.test.parent.columns = columnNames;\n      }",
               "async": 0,
               "sync": true,
@@ -1212,9 +2164,14 @@
               "_currentRetry": 0,
               "pending": false,
               "type": "hook",
-              "parent": "1XbuYE64PZQZ3rAnXkcIV",
+              "parent": "5xwcLEn61POMiG9X8BztZ",
               "ctx": null,
-              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+              "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+              "originalTitle": "\"before all\" hook",
+              "_events": {},
+              "_eventsCount": 1,
+              "duration": 0,
+              "_error": null
             }
           ],
           "_afterEach": [],
@@ -1227,8 +2184,20 @@
           "delayed": false,
           "_events": {},
           "_eventsCount": 1,
-          "parent": "XFicB2N7mMwOih5soC6rk",
-          "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+          "parent": "6adsUNT8XLjWqTDWrqxBj",
+          "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+          "_testId": "urn:uuid:e2a9aed6-71c5-4532-a4da-0941758f72d6",
+          "matrix": true,
+          "report": true,
+          "columns": [
+            "Danube Tech",
+            "Digital Bazaar",
+            "Mattr Labs",
+            "Mavennet",
+            "mesur.io",
+            "Spherity",
+            "Transmute"
+          ]
         }
       ],
       "tests": [],
@@ -1247,8 +2216,9 @@
       "delayed": false,
       "_events": {},
       "_eventsCount": 1,
-      "parent": "xhoUMG9-LalfBE1-B7Cnu",
-      "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js"
+      "parent": "gPpqBoXNp6gIsXnXVxoPh",
+      "file": "/home/liminal18/Programs/nodeJS/digital_bazaar/vaccination-certificate-test-suite/tests/10-interop.js",
+      "_testId": "urn:uuid:8e95cf30-f1f3-4dd0-b3a4-64d316c9295e"
     }
   ],
   "tests": [],
@@ -1272,5 +2242,5 @@
     ]
   },
   "_eventsCount": 2,
-  "_testId": "urn:uuid:dd7f99af-935f-433a-910c-d4640eb71fea"
+  "_testId": "urn:uuid:e1ba0780-ad45-4045-a075-20babd0ce6bc"
 }
