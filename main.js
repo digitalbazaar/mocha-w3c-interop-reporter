@@ -9,7 +9,8 @@ const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
-const {formatTest, addSubTests} = require('./handlers');
+const {formatTest} = require('./handlers');
+const {writeJSON} = require('./files');
 
 const {
   EVENT_RUN_END,
@@ -38,7 +39,7 @@ function InteropReporter(runner, options) {
   });
   runner.on(EVENT_SUITE_BEGIN, function(suite) {
     // the rootSuite will setup the report structure.
-    if(!suite.parent && suite.suites.length) {
+    if(suite.root && suite.suites.length) {
       const [rootSuite] = suite.suites;
       rootSuite.suites.forEach(s => {
         report[s.title] = [];
@@ -49,13 +50,17 @@ function InteropReporter(runner, options) {
     }
     console.log(spaces(parents(suite) * 2), suite.title);
   }).on(EVENT_SUITE_END, function(suite) {
+/* FIXME do not include in release
+    if(suite.root) {
+      writeJSON({path: './report.log', data: suite}).then(console.log, console.error);
+    }
+*/
     // if a suite is a report then get all the test results for it
     if(suite.report === true) {
       // FIXME this is what we want, but don't have yet
       reports.add(suite);
       report[suite.title] = report[suite.title].concat(suite.tests);
       // a report can have describe statements in it we need subtests from
-      addSubTests({report, suites: suite.suites, title: suite.title});
     }
   }).on(EVENT_TEST_PASS, test => {
     console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);
