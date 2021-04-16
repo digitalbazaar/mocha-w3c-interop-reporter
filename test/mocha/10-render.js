@@ -5,16 +5,18 @@
 
 require = require('esm')(module);
 
-const suite = require('../raw-mocha-finished.json');
+const {singleMatrix, multipleMatrices} = require('../mock-data');
 const {makeReport} = require('../../generate');
 const {asyncWriteFile} = require('../../files');
 
 describe('generate', async function() {
   it('should render a matrix', async function() {
-    const report = await makeReport({suite});
-    await asyncWriteFile('./report.html', report);
+    const report = await makeReport({suite: singleMatrix});
+    await asyncWriteFile('./single-report.html', report);
   });
   it('should render multiple matrices', async function() {
+    const report = await makeReport({suite: multipleMatrices});
+    await asyncWriteFile('./multiple-report.html', report);
 
   });
 });
