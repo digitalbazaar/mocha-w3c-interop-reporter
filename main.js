@@ -9,7 +9,8 @@ const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
-const config = require('./config.json');
+const {asyncWriteFile} = require('./files');
+const config = require('./config');
 
 const {
   EVENT_RUN_END,
@@ -25,8 +26,17 @@ const {
  * @param {Function} runner - A mocha runner.
  * @param {object} options - The command line options passed to mocha.
  */
-function InteropReporter(runner, options) {
+function InteropReporter(runner, options = {}) {
   this.config = config;
+  const {
+    reporterOptions
+  } = options;
+  const {
+    reportDir = config.dirs.report,
+    body = config.templates.body
+  } = reporterOptions;
+  this.config.dirs.report = reportDir;
+  this.config.templates.body = body;
   let rootSuite = null;
   // inherit the base Mocha reporter
   Mocha.reporters.Base.call(this, runner, options);
@@ -49,7 +59,11 @@ function InteropReporter(runner, options) {
   }).on(EVENT_RUN_END, async function() {
     try {
       const reportHTML = await makeReport({suite: rootSuite});
-      console.log(reportHTML);
+      // if there is no report dir return the html
+      if(!reportDir) {
+        return reportHTML;
+      }
+      await asyncWriteFile(`${reportDir}/index.html`, reportHTML);
     } catch(e) {
       console.error(e);
     }

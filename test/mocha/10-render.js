@@ -12,7 +12,8 @@ const {asyncWriteFile} = require('../../files');
 describe('generate', async function() {
   it('should render a matrix', async function() {
     const report = await makeReport({suite: singleMatrix});
-    await asyncWriteFile('./single-report.html', report);
+    const htmlResult = await asyncWriteFile('./single-report.html', report);
+console.log(htmlResult);
   });
   it('should render multiple matrices', async function() {
     const report = await makeReport({suite: multipleMatrices});

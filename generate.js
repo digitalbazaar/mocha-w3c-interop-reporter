@@ -6,7 +6,7 @@
 /**
  * Generates the Report using a set of report files.
  */
-const testConfig = require('./config.json');
+const testConfig = require('./config');
 const {makeTemplate} = require('./handlebars');
 const {getPartial} = require('./files.js');
 const {findReports, makeTemplateContext} = require('./handlers');
