@@ -34,11 +34,13 @@ function InteropReporter(runner, options = {}) {
   const {
     reportDir = config.dirs.report,
     body = config.templates.body,
-    respec = config.respecConfig
+    respec = config.respecConfig,
+    title = config.title
   } = reporterOptions;
   this.config.dirs.report = reportDir;
   this.config.templates.body = body;
   this.config.respecConfig = respec;
+  this.config.title = title;
   let rootSuite = null;
   // inherit the base Mocha reporter
   Mocha.reporters.Base.call(this, runner, options);
