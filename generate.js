@@ -8,14 +8,15 @@
  */
 const testConfig = require('./config');
 const {makeTemplate} = require('./handlebars');
-const {getPartial} = require('./files.js');
+const {asyncReadFile, getPartial} = require('./files.js');
 const {findReports, makeTemplateContext} = require('./handlers');
 
 async function makeReport({suite}) {
-  const {templates, respecConfig} = testConfig;
+  const {templates, respecConfig, title} = testConfig;
   const reports = findReports({suite});
   const context = makeTemplateContext({reports});
-  context.respecConfig = JSON.stringify(respecConfig);
+  context.respecConfig = await asyncReadFile(respecConfig);
+  context.title = title;
   // go ahead and load these partial templates
   // from disk into handlebars
   await getPartial({filePath: templates.head, name: 'head.hbs'});

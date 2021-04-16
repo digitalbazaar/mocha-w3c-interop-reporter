@@ -1,12 +1,11 @@
 import {join} from 'path';
 
 module.exports = {
+  title: 'W3C Interop Test',
   dirs: {
     report: null
   },
-  respecConfig: {
-    shortName: 'shortName'
-  },
+  respecConfig: join(__dirname, 'respec.json'),
   templates: {
     body: join(__dirname, 'body.hbs'),
     head: join(__dirname, 'head.hbs'),
