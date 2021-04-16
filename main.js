@@ -9,7 +9,7 @@ const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
-//const {writeJSON} = require('./files');
+const config = require('./config.json');
 
 const {
   EVENT_RUN_END,
@@ -26,6 +26,7 @@ const {
  * @param {object} options - The command line options passed to mocha.
  */
 function InteropReporter(runner, options) {
+  this.config = config;
   let rootSuite = null;
   // inherit the base Mocha reporter
   Mocha.reporters.Base.call(this, runner, options);
@@ -38,15 +39,8 @@ function InteropReporter(runner, options) {
   runner.on(EVENT_SUITE_BEGIN, function(suite) {
     console.log(spaces(parents(suite) * 2), suite.title);
   }).on(EVENT_SUITE_END, function(suite) {
-
     if(suite.root) {
       rootSuite = suite;
-    /* this is for dumping mocha results
-      writeJSON({
-        path: './report.log',
-        data: suite
-      }).then(console.log, console.error);
-    */
     }
   }).on(EVENT_TEST_PASS, test => {
     console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);
