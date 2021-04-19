@@ -60,6 +60,7 @@ function InteropReporter(runner, options = {}) {
     console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);
   }).on(EVENT_TEST_FAIL, test => {
     console.log(spaces(parents(test) * 2), Chalk.red(failed), test.title);
+    console.error(test.err);
   }).on(EVENT_RUN_END, async function() {
     try {
       const reportHTML = await makeReport({suite: rootSuite});
