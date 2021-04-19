@@ -5,9 +5,11 @@
 
 require = require('esm')(module);
 
+const {join} = require('path');
 const {singleMatrix, multipleMatrices} = require('../mock-data');
 const {makeReport} = require('../../generate');
 const {shouldBeReport} = require('../assertions');
+const {asyncReadFile} = require('../../files');
 
 // FIXME remove this
 //const {asyncWriteFile} = require('../../files');
@@ -15,12 +17,16 @@ const {shouldBeReport} = require('../assertions');
 describe('generate', async function() {
   it('should render a matrix', async function() {
     const report = await makeReport({suite: singleMatrix});
-    shouldBeReport(report);
-    console.log('single report', report);
+    //await asyncWriteFile(join(__dirname, '../single-report.html'), report);
+    const expectedReport = await asyncReadFile(
+      join(__dirname, '../single-report.html'));
+    shouldBeReport(report, expectedReport.toString());
   });
   it('should render multiple matrices', async function() {
     const report = await makeReport({suite: multipleMatrices});
-    shouldBeReport(report);
-    console.log('multiple report', report);
+    //await asyncWriteFile(join(__dirname, '../multiple-report.html'), report);
+    const expectedReport = await asyncReadFile(
+      join(__dirname, '../multiple-report.html'));
+    shouldBeReport(report, expectedReport.toString());
   });
 });
