@@ -1,5 +1,6 @@
 const Handlebars = require('handlebars');
 const {passing, failed, pending} = require('./constants');
+const {formatJSON} = require('./files');
 
 Handlebars.registerHelper('getStatusMark', state => {
   let statusMark = pending;
@@ -11,6 +12,8 @@ Handlebars.registerHelper('getStatusMark', state => {
   }
   return statusMark;
 });
+
+Handlebars.registerHelper('formatJSON', data => formatJSON({data}));
 
 Handlebars.registerHelper(
   'getOptional', optional => optional ? 'optional' : 'not-optional');
