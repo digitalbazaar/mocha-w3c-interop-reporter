@@ -1,1 +1,0 @@
-const interopReporter = require('..');
