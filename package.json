@@ -14,8 +14,11 @@
     "mocha",
     "w3c"
   ],
-  "author": "Digital Bazaar",
-  "license": "ISC",
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "https://digitalbazaar.com"
+  },
   "bugs": {
     "url": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter/issues"
   },
