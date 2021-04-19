@@ -1,22 +1,5 @@
 <section class="informative" id="{{matrix.title}}">
   <h2>{{matrix.title}}</h2>
-  {{#if matrix.reportData}}
-  <details>
-    <summary>Click to see Report Data</summary>
-    <pre>
-    {{formatJSON matrix.reportData}}
-    </pre>
-    </details>
-  {{/if}}
-  {{#if matrix.images}}
-  <details>
-    <summary>Click to see Report Images</summary>
-    {{#each matrix.images}}
-      {{this}}
-    {{/each}}
-    </details>
-  {{/if}}
-
   <table class="simple">
     <style>
       td.subtest {
@@ -45,4 +28,15 @@
   {{/each}}
   </tbody>
   </table>
+  {{#if matrix.reportData}}
+    <pre>
+    {{formatJSON matrix.reportData}}
+    </pre>
+  {{/if}}
+  {{#if matrix.images}}
+    {{#each matrix.images}}
+      {{formatJSON this}}
+      <img src={{{this}}} />
+    {{/each}}
+  {{/if}}
 </section>
