@@ -7,16 +7,16 @@ require = require('esm')(module);
 
 const {singleMatrix, multipleMatrices} = require('../mock-data');
 const {makeReport} = require('../../generate');
-const {asyncWriteFile} = require('../../files');
+// FIXME remove this
+//const {asyncWriteFile} = require('../../files');
 
 describe('generate', async function() {
   it('should render a matrix', async function() {
     const report = await makeReport({suite: singleMatrix});
-    const htmlResult = await asyncWriteFile('./single-report.html', report);
-console.log(report);
+    console.log('single report', report);
   });
   it('should render multiple matrices', async function() {
     const report = await makeReport({suite: multipleMatrices});
-    await asyncWriteFile('./multiple-report.html', report);
+    console.log('multiple report', report);
   });
 });
