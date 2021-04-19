@@ -28,15 +28,14 @@
   {{/each}}
   </tbody>
   </table>
+  {{#if matrix.images}}
+    {{#each matrix.images}}
+      <img src={{{this}}} />
+    {{/each}}
+  {{/if}}
   {{#if matrix.reportData}}
     <pre>
     {{formatJSON matrix.reportData}}
     </pre>
-  {{/if}}
-  {{#if matrix.images}}
-    {{#each matrix.images}}
-      {{formatJSON this}}
-      <img src={{{this}}} />
-    {{/each}}
   {{/if}}
 </section>
