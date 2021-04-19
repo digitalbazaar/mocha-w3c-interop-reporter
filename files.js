@@ -62,6 +62,10 @@ const noCircular = (key, value) => {
   return value;
 };
 
+export function formatJSON({data, replacer = noCircular}) {
+  return JSON.stringify(data, replacer, 2);
+}
+
 /**
  * Writes a json file to disc.
  *
@@ -74,5 +78,5 @@ const noCircular = (key, value) => {
  * @returns {Promise} Resolves on write.
  */
 export async function writeJSON({path, data, replacer = noCircular}) {
-  return asyncWriteFile(path, JSON.stringify(data, replacer, 2));
+  return asyncWriteFile(path, formatJSON({data, replacer}));
 }
