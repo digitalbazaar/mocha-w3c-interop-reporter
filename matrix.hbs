@@ -10,7 +10,24 @@
       }
     </style>
     <thead>
-      <th width="80%">Test</th>
+      <th width="40%">
+        <style>
+          .rowLabel {
+             text-align: left;
+             padding-left: 2rem;
+           }
+          .columnLabel {
+            text-align: right;
+            padding-top: 2rem;
+          }
+        </style>
+        <div class="columnLabel label">
+        {{matrix.columnLabel}}
+        </div>
+        <div class="rowLabel label">
+        {{matrix.rowLabel}}
+        </div>
+      </th>
         {{#each matrix.columns}}
           <th>{{this}}</th>
         {{/each}} 
