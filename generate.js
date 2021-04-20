@@ -11,12 +11,22 @@ const {makeTemplate} = require('./handlebars');
 const {asyncReadFile, getPartial} = require('./files.js');
 const {findReports, makeTemplateContext} = require('./handlers');
 
-async function makeReport({suite}) {
+/**
+ * Takes in a suite and an object with stats about the test.
+ *
+ * @param {object} options - Options to use.
+ * @param {object} options.suite - The root suite of the tests.
+ * @param {object} options.stats - Mocha generated test stats.
+ *
+ * @returns {Promise<string>} An HTML report.
+*/
+async function makeReport({suite, stats}) {
   const {templates, respecConfig, title} = testConfig;
   const reports = findReports({suite});
   const context = makeTemplateContext({reports});
   context.respecConfig = await asyncReadFile(respecConfig);
   context.title = title;
+  context.stats = stats;
   // go ahead and load these partial templates
   // from disk into handlebars
   await getPartial({filePath: templates.head, name: 'head.hbs'});
