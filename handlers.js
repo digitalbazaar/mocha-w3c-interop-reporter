@@ -121,3 +121,15 @@ export function formatTest(test, parentSuite = '') {
     errors: test.err ? test.err.message : '',
   };
 }
+
+function percent(observations, total) {
+  return Math.floor(observations / total) * 100;
+}
+
+export function formatStats({passes, tests, failures}) {
+  return [
+    `Tests passed ${passes}/${tests} ${percent(passes, tests)}%`,
+    `Tests failed ${failures}/${tests} ${percent(failures, tests)}%`,
+    `Total tests ${tests}`
+  ];
+}

@@ -11,13 +11,13 @@ const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
 const {asyncWriteFile} = require('./files');
 const config = require('./config');
+const {formatStats} = require('./handlers');
 
 const {
   EVENT_RUN_END,
   EVENT_TEST_FAIL,
   EVENT_TEST_PASS,
   EVENT_SUITE_BEGIN,
-  EVENT_SUITE_END
 } = Mocha.Runner.constants;
 
 /**
@@ -58,6 +58,8 @@ function InteropReporter(runner, options = {}) {
     console.error(spaces(parents(test) * 2), test.err);
   }).on(EVENT_RUN_END, async function() {
     try {
+      console.log('\n');
+      formatStats(this.stats).forEach(stat => console.log(stat));
       const reportHTML = await makeReport({
         suite: this.suite,
         stats: this.stats
