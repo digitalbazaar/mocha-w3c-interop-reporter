@@ -23,10 +23,12 @@ const {findReports, makeTemplateContext} = require('./handlers');
 async function makeReport({suite, stats}) {
   const {templates, respecConfig, title} = testConfig;
   const reports = findReports({suite});
+  const {summary = new Set()} = suite.suites.find(s => s.summary) || {};
   const context = makeTemplateContext({reports});
   context.respecConfig = await asyncReadFile(respecConfig);
   context.title = title;
   context.stats = stats;
+  context.summary = Array.from(summary);
   // go ahead and load these partial templates
   // from disk into handlebars
   await getPartial({filePath: templates.head, name: 'head.hbs'});
