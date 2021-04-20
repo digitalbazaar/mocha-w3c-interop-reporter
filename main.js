@@ -41,7 +41,6 @@ function InteropReporter(runner, options = {}) {
   this.config.templates.body = body;
   this.config.respecConfig = respec;
   this.config.title = title;
-  let rootSuite = null;
   // inherit the base Mocha reporter
   Mocha.reporters.Base.call(this, runner, options);
   // add a testId to suite and test
@@ -52,10 +51,6 @@ function InteropReporter(runner, options = {}) {
   });
   runner.on(EVENT_SUITE_BEGIN, function(suite) {
     console.log(spaces(parents(suite) * 2), suite.title);
-  }).on(EVENT_SUITE_END, function(suite) {
-    if(suite.root) {
-      rootSuite = suite;
-    }
   }).on(EVENT_TEST_PASS, test => {
     console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);
   }).on(EVENT_TEST_FAIL, test => {
@@ -63,7 +58,10 @@ function InteropReporter(runner, options = {}) {
     console.error(spaces(parents(test) * 2), test.err);
   }).on(EVENT_RUN_END, async function() {
     try {
-      const reportHTML = await makeReport({suite: rootSuite});
+      const reportHTML = await makeReport({
+        suite: this.suite,
+        stats: this.stats
+      });
       // if there is no report dir return the html
       if(!reportDir) {
         return reportHTML;
