@@ -93,13 +93,18 @@ export function makeMatrix({columns = [], tests = [], ...suite}) {
 export function makeTemplateContext({reports}) {
   const context = {
     matrices: [],
-    tables: []
+    tables: [],
+    summary: []
   };
   for(const report of reports) {
     const tests = addSubTests({tests: report.tests, suites: report.suites});
     report.tests = tests;
     if(report.matrix) {
       context.matrices.push(makeMatrix(report));
+    }
+    // reports can have summaries
+    if(Array.isArray(report.summary)) {
+      context.summary = context.summary.concat(report.summary);
     }
   }
   return context;

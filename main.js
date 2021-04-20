@@ -59,10 +59,11 @@ function InteropReporter(runner, options = {}) {
   }).on(EVENT_RUN_END, async function() {
     try {
       console.log('\n');
-      formatStats(this.stats).forEach(stat => console.log(stat));
+      const stats = formatStats(this.stats);
+      stats.forEach(stat => console.log(stat));
       const reportHTML = await makeReport({
         suite: this.suite,
-        stats: this.stats
+        stats
       });
       // if there is no report dir return the html
       if(!reportDir) {
