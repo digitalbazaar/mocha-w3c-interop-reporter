@@ -7331,6 +7331,8 @@
           "_testId": "urn:uuid:5e74e939-a01a-4dca-ac7d-23bd132ae9e9",
           "matrix": true,
           "report": true,
+          "columnLabel": "Verifier",
+          "rowLabel": "Issuer",
           "columns": [
             "Danube Tech",
             "Digital Bazaar",
