@@ -9,7 +9,7 @@ const Chalk = require('chalk');
 const {passing, failed} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
-const {asyncWriteFile} = require('./files');
+const {asyncWriteFile, writeJSON} = require('./files');
 const config = require('./config');
 const {formatStats} = require('./handlers');
 
@@ -34,13 +34,22 @@ function InteropReporter(runner, options = {}) {
   const {
     reportDir = config.dirs.report,
     body = config.templates.body,
+    matrix = config.templates.matrix,
+    head = config.templates.head,
+    metrics = config.templates.metrics,
     respec = config.respecConfig,
+    reportLog,
     title = config.title
   } = reporterOptions;
   this.config.dirs.report = reportDir;
   this.config.templates.body = body;
   this.config.respecConfig = respec;
   this.config.title = title;
+  this.config.matrix = matrix;
+  this.config.head = head;
+  this.config.metrics = metrics;
+  // this is a file path for a report log
+  this.reportLog = reportLog;
   // inherit the base Mocha reporter
   Mocha.reporters.Base.call(this, runner, options);
   // add a testId to suite and test
@@ -65,6 +74,10 @@ function InteropReporter(runner, options = {}) {
         suite: this.suite,
         stats
       });
+      if(this.reportLog) {
+console.log('reportLog found');
+        writeJSON(this.reportLog, this.suite);
+      }
       // if there is no report dir return the html
       if(!reportDir) {
         return reportHTML;
