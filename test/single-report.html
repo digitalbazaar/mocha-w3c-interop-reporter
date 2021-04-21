@@ -47,135 +47,204 @@
     </section>
     <section id="conformance">
       <!--- This will take the tests and display them as matrices -->
-        <section class="informative" id="Yellow fever">
-          <h2>Yellow fever</h2>
-          <table class="simple">
-            <style>
-              td.subtest {
-                padding-left: 2rem;
-              }
-              td.optional {
-                background-color: #b9b7b7;
-              }
-             .rowLabel {
-                text-align: left;
-                padding-left: 2rem;
-              }
-             .columnLabel {
-               text-align: right;
-               padding-top: 2rem;
-               padding-right: inherit;
-             }
-            </style>
-            <thead>
-              <th width="40%">
-                <div class="columnLabel label">
-                Verifier
-                </div>
-                <div class="rowLabel label">
-                Issuer
-                </div>
-              </th>
-                  <th>Danube Tech</th>
-                  <th>Digital Bazaar</th>
-                  <th>Mattr Labs</th>
-                  <th>Mavennet</th>
-                  <th>mesur.io</th>
-                  <th>Spherity</th>
-                  <th>Transmute</th>
-            </thead>
-            <tbody>
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">Danube Tech</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="failed not-optional">❌</td>
-            </tr>
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">Digital Bazaar</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="failed not-optional">❌</td>
-            </tr>
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">Mattr Labs</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="failed not-optional">❌</td>
-            </tr>
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">Mavennet</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="failed not-optional">❌</td>
-            </tr>
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">mesur.io</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="failed not-optional">❌</td>
-            </tr>
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">Spherity</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="failed not-optional">❌</td>
-            </tr>
-            <tr>
-              <!--This is the name of the test-->
-              <td class="subtest">Transmute</td>
-              <!--These contain if the test passed, failed, or was skipped-->
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="passed not-optional">✓</td>
-                <td class="failed not-optional">❌</td>
-            </tr>
-          </tbody>
-          </table>
+        <section class="informative" id="Japanese encephalitis">
+          <h2>Japanese encephalitis</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .row.justify-center {
+             justify-content: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           pre, code.hljs{
+             overflow: auto;
+           }
+          </style>
+          <div class="row justify-center">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Verfier &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Issuer</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font">Danube Tech</th>
+                    <th class="no-wrap small-font">Digital Bazaar</th>
+                    <th class="no-wrap small-font">Mattr Labs</th>
+                    <th class="no-wrap small-font">Mavennet</th>
+                    <th class="no-wrap small-font">mesur.io</th>
+                    <th class="no-wrap small-font">Spherity</th>
+                    <th class="no-wrap small-font">Transmute</th>
+                </thead>
+              <tbody>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">Danube Tech</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="failed not-optional">❌</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">Digital Bazaar</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="failed not-optional">❌</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">Mattr Labs</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">Mavennet</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">mesur.io</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">Spherity</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">Transmute</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+                  <td class="passed not-optional">✓</td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
           <div>
             <div class="flex-center">
-              <div>
+              <div class="row">
+                    <img class="qr-code" src=data:image/gif;base64,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 />
               </div>
-              <div>
+              <div class="">
+                      <pre class="small-font">{
+          "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://w3id.org/vaccination/v1",
+            "https://w3id.org/vc-revocation-list-2020/v1"
+          ],
+          "type": [
+            "VerifiableCredential",
+            "VaccinationCertificate"
+          ],
+          "id": "urn:uvci:OWMyOTEyZjItYjFlZC00YTkyLTliYTQtZGEwY2FkMDAwYjg2",
+          "name": "Japanese encephalitis",
+          "description": "Japanese encephalitis",
+          "credentialSubject": {
+            "type": "VaccinationEvent",
+            "batchNumber": "22",
+            "administeringCentre": "U.S. Public Health Authority",
+            "healthProfessional": "U.S. Public Health Authority",
+            "countryOfVaccination": "United States of America",
+            "recipient": {
+              "type": "VaccineRecipient",
+              "givenName": "JOHN",
+              "familyName": "SMITH",
+              "gender": "Male",
+              "birthDate": "1958-07-17"
+            },
+            "vaccine": {
+              "type": "Vaccine",
+              "disease": "Japanese encephalitis",
+              "atcCode": "XM0RC1"
+            }
+          },
+          "issuanceDate": "2021-04-21T20:31:18.815Z",
+          "expirationDate": "2021-06-21T20:31:18.815Z",
+          "issuer": "did:v1:test:nym:z6MkqHgy5udoUhAjc7QsYSP9bRshjv3ti7QpYQ9iYqwG1QDN",
+          "credentialStatus": {
+            "id": "https://issuer.demo.digitalbazaar.com/vc-issuer/instances/did%3Akey%3Az6Mkpk3PCSQXHQoGd2q2hxqndwAJDSJW4L1fbX3zzzgCXmfV/rlc/ebae7ea8-6dde-425c-af68-1bbd19f00efd#40193",
+            "type": "RevocationList2020Status",
+            "revocationListCredential": "https://issuer.demo.digitalbazaar.com/vc-issuer/instances/did%3Akey%3Az6Mkpk3PCSQXHQoGd2q2hxqndwAJDSJW4L1fbX3zzzgCXmfV/rlc/ebae7ea8-6dde-425c-af68-1bbd19f00efd",
+            "revocationListIndex": "40193"
+          },
+          "proof": {
+            "type": "Ed25519Signature2018",
+            "created": "2021-04-21T20:31:20Z",
+            "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..uijGdQ5vfhpYuyhxj_yZsqG0XnDZAwQ9okZzoq8LFZBwjStd1K4ASbLq-L5WyHRjPqqxDFArbAsoaVEikUKWCg",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "did:v1:test:nym:z6MkqHgy5udoUhAjc7QsYSP9bRshjv3ti7QpYQ9iYqwG1QDN#z6MkqHgy5udoUhAjc7QsYSP9bRshjv3ti7QpYQ9iYqwG1QDN"
+          }
+        }</pre>
               </div>
             </div>
           </div>
