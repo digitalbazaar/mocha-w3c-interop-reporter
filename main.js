@@ -38,18 +38,18 @@ function InteropReporter(runner, options = {}) {
     head = config.templates.head,
     metrics = config.templates.metrics,
     respec = config.respecConfig,
-    reportLog,
+    suiteLog,
     title = config.title
   } = reporterOptions;
   this.config.dirs.report = reportDir;
   this.config.templates.body = body;
   this.config.respecConfig = respec;
   this.config.title = title;
-  this.config.matrix = matrix;
-  this.config.head = head;
-  this.config.metrics = metrics;
-  // this is a file path for a report log
-  this.reportLog = reportLog;
+  this.config.templates.matrix = matrix;
+  this.config.templates.head = head;
+  this.config.templates.metrics = metrics;
+  // this is a file path for a suite log
+  this.config.suiteLog = suiteLog;
   // inherit the base Mocha reporter
   Mocha.reporters.Base.call(this, runner, options);
   // add a testId to suite and test
@@ -74,9 +74,8 @@ function InteropReporter(runner, options = {}) {
         suite: this.suite,
         stats
       });
-      if(this.reportLog) {
-console.log('reportLog found');
-        writeJSON(this.reportLog, this.suite);
+      if(config.suiteLog) {
+        writeJSON({path: config.suiteLog, data: this.suite});
       }
       // if there is no report dir return the html
       if(!reportDir) {
