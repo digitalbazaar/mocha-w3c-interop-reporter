@@ -127,8 +127,20 @@ export function formatTest(test, parentSuite = '') {
   };
 }
 
+/**
+ * Takes in the the number of success or fails
+ * gets a ratio of observation / total
+ * then uses the first 3 decimals of that number * 100
+ * to get a percent to display.
+ *
+ * @param {number} observations - Successes or Fails.
+ * @param {number} total - Total tests.
+ *
+ * @returns {number} A percent.
+*/
 function percent(observations, total) {
-  return Math.round(observations / total * 100);
+  const ratio = observations / total;
+  return Math.round((ratio - (ratio % 0.001)) * 100);
 }
 
 /**
