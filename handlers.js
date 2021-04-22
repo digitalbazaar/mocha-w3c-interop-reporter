@@ -128,9 +128,20 @@ export function formatTest(test, parentSuite = '') {
 }
 
 function percent(observations, total) {
-  return Math.floor(observations / total) * 100;
+  return Math.round(observations / total * 100);
 }
 
+/**
+ * Takes in stats computed by mocha and formats them into
+ * strings for reports and logs.
+ *
+ * @param {object} stats - A Mocha stats object.
+ * @param {number} stats.passes - The number of passes.
+ * @param {number} stats.tests - The total number of tests.
+ * @param {number} stats.failures - The number of failures.
+ *
+ * @returns {Array<string>} Human Readable stats.
+*/
 export function formatStats({passes, tests, failures}) {
   return [
     `Tests passed ${passes}/${tests} ${percent(passes, tests)}%`,
