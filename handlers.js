@@ -129,9 +129,7 @@ export function formatTest(test, parentSuite = '') {
 
 /**
  * Takes in the the number of success or fails
- * gets a ratio of observation / total
- * then uses the first 3 decimals of that number * 100
- * to get a percent to display.
+ * gets a ratio of observation / total.
  *
  * @param {number} observations - Successes or Fails.
  * @param {number} total - Total tests.
@@ -139,8 +137,7 @@ export function formatTest(test, parentSuite = '') {
  * @returns {number} A percent.
 */
 function percent(observations, total) {
-  const ratio = observations / total;
-  return Math.round((ratio - (ratio % 0.001)) * 100);
+  return observations / total * 100;
 }
 
 /**
@@ -151,13 +148,29 @@ function percent(observations, total) {
  * @param {number} stats.passes - The number of passes.
  * @param {number} stats.tests - The total number of tests.
  * @param {number} stats.failures - The number of failures.
+ * @param {number} stats.pending - The number of skipped tests.
  *
  * @returns {Array<string>} Human Readable stats.
 */
-export function formatStats({passes, tests, failures}) {
+export function formatStats({passes, tests, failures, pending}) {
+  const testsRun = tests - pending;
+  let passPercent = percent(passes, testsRun);
+  let failPercent = percent(failures, testsRun);
+  // if there are more passing than failing then
+  // round up the failures
+  if(passPercent > failPercent) {
+    passPercent = Math.floor(passPercent);
+    failPercent = Math.ceil(failPercent);
+  }
+  // if there are fewer or equal passing round up the passing
+  if(passPercent <= failPercent) {
+    passPercent = Math.ceil(passPercent);
+    failPercent = Math.floor(failPercent);
+  }
   return [
-    `Tests passed ${passes}/${tests} ${percent(passes, tests)}%`,
-    `Tests failed ${failures}/${tests} ${percent(failures, tests)}%`,
+    `Tests passed ${passes}/${testsRun} ${passPercent}%`,
+    `Tests failed ${failures}/${testsRun} ${failPercent}%`,
+    `Tests skipped ${pending}`,
     `Total tests ${tests}`
   ];
 }
