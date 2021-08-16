@@ -35,7 +35,7 @@ async function makeReport({suite, stats}) {
   await getPartial({filePath: templates.body, name: 'body.hbs'});
   await getPartial({filePath: templates.metrics, name: 'metrics.hbs'});
   await getPartial({filePath: templates.matrix, name: 'matrix.hbs'});
-  const template = makeTemplate();
+  const template = makeTemplate(testConfig);
   const result = template(context);
   return result;
 }
