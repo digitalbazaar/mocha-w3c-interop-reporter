@@ -48,6 +48,21 @@ describe('Matrix Test', function() {
 
 ```
 
+A helpers file can be specified to add project specific helpers to report templates:
+
+```js
+// myproject/projectHelpers.js
+
+const helpers = {
+  upperCaseTitle(testTitle) {
+    return testTitle.toUpperCase();    
+  }
+};
+export default helpers;
+```
+
+then specify the path to the helpers file in the `--reporter-options helpers="$PWD/projectHelpers.js"`.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
