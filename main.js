@@ -27,10 +27,11 @@ const {
  * @param {object} options - The command line options passed to mocha.
  */
 function InteropReporter(runner, options = {}) {
+  // set config to the default configs
   this.config = config;
-  const {
-    reporterOptions
-  } = options;
+  // get the reporterOptions from mocha
+  const {reporterOptions} = options;
+  // use the default config values as the defaults
   const {
     reportDir = config.dirs.report,
     body = config.templates.body,
@@ -38,6 +39,7 @@ function InteropReporter(runner, options = {}) {
     head = config.templates.head,
     metrics = config.templates.metrics,
     respec = config.respecConfig,
+    helpers = config.helpers,
     suiteLog,
     title = config.title
   } = reporterOptions;
@@ -45,6 +47,7 @@ function InteropReporter(runner, options = {}) {
   this.config.templates.body = body;
   this.config.respecConfig = respec;
   this.config.title = title;
+  this.config.helpers = helpers;
   this.config.templates.matrix = matrix;
   this.config.templates.head = head;
   this.config.templates.metrics = metrics;
