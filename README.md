@@ -71,6 +71,42 @@ Handlebars lets you use the helpers inside of templates like this:
 
 If you need to know the data the template is receiving try logging the context passed to the report.
 
+The report consists of a number of different configuration options:
+
+```js
+import {join} from 'path';
+
+module.exports = {
+  title: 'W3C Interop Test',
+  dirs: {
+    // where to output the resulting HTML report
+    // if null we output to console.log
+    report: null
+  },
+  // where to log the resulting mocha root suite
+  // this can be used to generate test data
+  suiteLog: null,
+  // config options for the w3c respect library
+  respecConfig: join(__dirname, 'respec.json'),
+  // where to find the templates for handlebars
+  templates: {
+    body: join(__dirname, 'body.hbs'),
+    head: join(__dirname, 'head.hbs'),
+    metrics: join(__dirname, 'metrics.hbs'),
+    table: join(__dirname, 'table.hbs'),
+    matrix: join(__dirname, 'matrix.hbs')
+  }
+};
+```
+
+The templates are written in [Handlebars](https://handlebarsjs.com/).
+
+Most of the configuration options can be specified by command line options:
+
+```
+mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter/index.js --reporter-options body=\"$PWD/body.hbs\",matrix=\"$PWD/matrix.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Test Interoperability Report 1.0\",helpers=\"$PWD/templateHelpers.js\",suiteLog='./suite.log' --timeout 15000"
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
