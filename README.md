@@ -1,6 +1,6 @@
 # Mocha W3C Interop Reporter
 
-Is a mocha reporter that creates interopability matrixes in existing W3C documents with ReSpec.
+Is a mocha reporter that creates interoperability matrices in existing W3C documents with ReSpec.
 
 ## Installation
 
@@ -62,6 +62,14 @@ export default helpers;
 ```
 
 then specify the path to the helpers file in the `--reporter-options helpers="$PWD/projectHelpers.js"`.
+
+Handlebars lets you use the helpers inside of templates like this:
+
+```
+<td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
+```
+
+If you need to know the data the template is receiving try logging the context passed to the report.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
