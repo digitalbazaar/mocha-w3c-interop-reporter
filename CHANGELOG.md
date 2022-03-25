@@ -3,4 +3,4 @@
 ## 1.0.0 - TBD
 ### Added
   - Added a new command line option `helpers`.
-  - Added functionality add project specific helper methods to Handlebars.
+  - Add functionality that adds project specific helper methods to Handlebars.
