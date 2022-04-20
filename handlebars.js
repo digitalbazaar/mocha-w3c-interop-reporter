@@ -14,9 +14,9 @@ const registerHelpers = (helpersFile) => {
     }
     return statusMark;
   });
-  
+
   Handlebars.registerHelper('formatJSON', data => formatJSON({data}));
-  
+
   Handlebars.registerHelper(
     'getOptional', optional => optional ? 'optional' : 'not-optional');
   try {
