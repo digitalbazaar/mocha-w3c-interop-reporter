@@ -1,19 +1,10 @@
 const Handlebars = require('handlebars');
-const {passing, failed, pending} = require('./constants');
+const {statusMarks, pending} = require('./constants');
 const {formatJSON} = require('./files');
 
 // helpersFile is a path to a project specific helpers file.
 const registerHelpers = (helpersFile) => {
-  Handlebars.registerHelper('getStatusMark', state => {
-    let statusMark = pending;
-    if(state === 'passed') {
-      statusMark = passing;
-    }
-    if(state === 'failed') {
-      statusMark = failed;
-    }
-    return statusMark;
-  });
+  Handlebars.registerHelper('getStatusMark', state => statusMarks[state] || pending);
 
   Handlebars.registerHelper('formatJSON', data => formatJSON({data}));
 
