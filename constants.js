@@ -21,7 +21,7 @@ module.exports = {
   statusMarks,
   pending,
   passing,
-  failed,
+  failing,
   accessDenied,
   timeout,
   notImplemented
