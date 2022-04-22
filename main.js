@@ -6,7 +6,7 @@
 const Mocha = require('mocha');
 const uuid = require('uuid');
 const Chalk = require('chalk');
-const {passing, failed} = require('./constants');
+const {passing, failing} = require('./constants');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
 const {asyncWriteFile, writeJSON} = require('./files');
@@ -66,7 +66,7 @@ function InteropReporter(runner, options = {}) {
   }).on(EVENT_TEST_PASS, test => {
     console.log(spaces(parents(test) * 2), Chalk.green(passing), test.title);
   }).on(EVENT_TEST_FAIL, test => {
-    console.log(spaces(parents(test) * 2), Chalk.red(failed), test.title);
+    console.log(spaces(parents(test) * 2), Chalk.red(failing), test.title);
     console.error(spaces(parents(test) * 2), test.err);
   }).on(EVENT_RUN_END, async function() {
     try {
