@@ -49,19 +49,23 @@ export function findReports({suite, reports = new Set()}) {
  *
  * @param {object} options - Options to use.
  * @param {Array<object>} options.tests - An array of tests.
- * @param {Array<string>} options.columns - An array of strings.
+ * @param {Array<string>} options.columns - An array of column ids.
+ * @param {Array<string>} [options.notImplemented=[]] - An array of strings.
  *
  * @returns {Array<object>} - An array of rows with cells.
 */
-export function makeRows({tests, columns}) {
-  return tests.reduce((rows, current) => {
+export function makeRows({tests, columns, notImplemented}) {
+  const columnIds = [...columns, ...notImplemented];
+  const _rows = tests.reduce((rows, current) => {
     // if we get dirty data ignore it
     if(!current.cell) {
       return rows;
     }
     const {columnId, rowId} = current.cell;
-    const columnIndex = columns.indexOf(columnId);
+    const columnIndex = columnIds.indexOf(columnId);
+    // find the row we are inserting a cell into
     let row = rows.find(f => f.id === rowId);
+    // if there is no row add one
     if(!row) {
       row = {id: rowId, cells: []};
       rows.push(row);
@@ -70,13 +74,36 @@ export function makeRows({tests, columns}) {
     row.cells[columnIndex] = current;
     return rows;
   }, []);
+  return _rows.map(({id, cells}) => {
+    for(const colName of notImplemented) {
+      const columnIndex = columnIds.indexOf(colName);
+        cells[columnIndex] = {
+          cell: {
+            rowId: id,
+            colId: colName
+          },
+          state: 'notImplemented'
+        }
+    }
+    return {id, cells};
+  });
 }
 
-export function makeMatrix({columns = [], tests = [], ...suite}) {
+/**
+ * Makes a matrix from a report.
+ *
+ * @param {object} options - Options to use.
+ * @param {Array<string>} options.columns - Names of implementations tested.
+ * @param {Array<object>} options.tests - An array of mocha tests.
+ * @param {Array<string} options.notImplemented - Names of implementations not tested.
+ *
+ * @returns {object} A matrix for a report.
+ */
+export function makeMatrix({columns = [], tests = [], notImplemented = [], ...suite}) {
   return {
     ...suite,
-    columns,
-    rows: makeRows({tests, columns})
+    columns: [...columns, ...notImplemented],
+    rows: makeRows({tests, columns, notImplemented})
   };
 }
 
