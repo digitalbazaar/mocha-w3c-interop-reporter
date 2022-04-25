@@ -12,9 +12,9 @@ const statusMarks = {
   accessDenied,
   timeout,
   notImplemented,
-  // this mocha's test states aren't in present tense
-  'passed': passing,
-  'failed': failing,
+  // mocha's test states aren't in present tense
+  passed: passing,
+  failed: failing,
 };
 
 module.exports = {
