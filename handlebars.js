@@ -3,7 +3,7 @@ const {statusMarks, pending} = require('./constants');
 const {formatJSON} = require('./files');
 
 // helpersFile is a path to a project specific helpers file.
-const registerHelpers = (helpersFile) => {
+const registerHelpers = helpersFile => {
   Handlebars.registerHelper('getStatusMark', state => statusMarks[state] || pending);
 
   Handlebars.registerHelper('formatJSON', data => formatJSON({data}));
@@ -24,9 +24,9 @@ const registerHelpers = (helpersFile) => {
   } catch(e) {
     console.error(`FAILED TO LOAD HELPERS FILE ${helpersFile}`, e);
   }
-}
+};
 
-const makeTemplate = (testConfig) => {
+const makeTemplate = testConfig => {
   registerHelpers(testConfig.helpers);
   const template = Handlebars.template;
   const templates = Handlebars.templates = Handlebars.templates || {};

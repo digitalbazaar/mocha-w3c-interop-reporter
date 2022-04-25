@@ -77,13 +77,13 @@ export function makeRows({tests, columns, notImplemented}) {
   return _rows.map(({id, cells}) => {
     for(const colName of notImplemented) {
       const columnIndex = columnIds.indexOf(colName);
-        cells[columnIndex] = {
-          cell: {
-            rowId: id,
-            colId: colName
-          },
-          state: 'notImplemented'
-        }
+      cells[columnIndex] = {
+        cell: {
+          rowId: id,
+          colId: colName
+        },
+        state: 'notImplemented'
+      };
     }
     return {id, cells};
   });
