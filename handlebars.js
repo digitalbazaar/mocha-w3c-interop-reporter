@@ -1,3 +1,8 @@
+/*!
+ * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
+ */
+'use strict';
+
 const Handlebars = require('handlebars');
 const statusMarks = require('./statusMarks');
 const {formatJSON} = require('./files');
