@@ -17,12 +17,4 @@ const statusMarks = {
   failed: failing,
 };
 
-module.exports = {
-  statusMarks,
-  pending,
-  passing,
-  failing,
-  accessDenied,
-  timeout,
-  notImplemented
-};
+module.exports = statusMarks;

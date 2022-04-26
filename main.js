@@ -6,7 +6,7 @@
 const Mocha = require('mocha');
 const uuid = require('uuid');
 const Chalk = require('chalk');
-const {passing, failing} = require('./constants');
+const {passing, failing} = require('./statusMarks');
 const {spaces, parents} = require('./utils');
 const {makeReport} = require('./generate');
 const {asyncWriteFile, writeJSON} = require('./files');
