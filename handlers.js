@@ -100,7 +100,8 @@ export function makeRows({tests, columns, notImplemented}) {
  *
  * @returns {object} A matrix for a report.
  */
-export function makeMatrix({columns = [], tests = [], notImplemented = [], ...suite}) {
+export function makeMatrix({
+  columns = [], tests = [], notImplemented = [], ...suite}) {
   return {
     ...suite,
     columns: [...columns, ...notImplemented],
