@@ -95,7 +95,8 @@ export function makeRows({tests, columns, notImplemented}) {
  * @param {object} options - Options to use.
  * @param {Array<string>} options.columns - Names of implementations tested.
  * @param {Array<object>} options.tests - An array of mocha tests.
- * @param {Array<string} options.notImplemented - Names of implementations not tested.
+ * @param {Array<string} options.notImplemented - Names of implementations not
+ *   tested.
  *
  * @returns {object} A matrix for a report.
  */
