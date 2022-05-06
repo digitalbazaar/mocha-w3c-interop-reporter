@@ -2,7 +2,7 @@
   "name": "mocha-w3c-interop-reporter",
   "version": "0.0.1",
   "description": "Mocha reporter that produces reports that can be embedded in specs.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -30,9 +30,9 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "eslint": "^7.24.0",
-    "eslint-config-digitalbazaar": "^2.6.1",
-    "eslint-plugin-jsdoc": "^32.3.0"
+    "eslint": "^8.14.0",
+    "eslint-config-digitalbazaar": "^3.0.0",
+    "eslint-plugin-jsdoc": "^39.2.9"
   },
   "peerDependencies": {
     "mocha": ">= 6.0"
