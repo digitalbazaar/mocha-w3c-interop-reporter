@@ -15,15 +15,17 @@ npm i --save digitalbazaar/mocha-w3c-interop-reporter
 The reporter wraps around existing Mocha interfaces such as `describe` and `it`.
 ```js
 describe('Matrix Test', function() {
-  // summaries are displayed in the SOTD section after the result results
+  // summaries are displayed in the SOTD section after the results
   const summaries = new Set();
   this.summary = summaries;
   // when the report sees a suite with report true it includes it
   this.report = true;
   // this tells the reporter to use the matrix.hbs template to display the results
   this.matrix = true;
-  // this gives the names of the columns
-  this.columns = columnNames;
+  // this gives the names of the implementations that are being tested
+  this.implemented = ['foo'];
+  // this gives the names of the implementations that are not being tested
+  this.notImplemented = ['bar'];
   // this will give the row label in the matrix
   this.rowLabel = 'Row';
   // this is the column label in the matrix
@@ -76,7 +78,7 @@ The report consists of a number of different configuration options:
 ```js
 import {join} from 'path';
 
-module.exports = {
+export const config = {
   title: 'W3C Interop Test',
   dirs: {
     // where to output the resulting HTML report
@@ -104,7 +106,7 @@ The templates are written in [Handlebars](https://handlebarsjs.com/).
 Most of the configuration options can be specified by command line options:
 
 ```
-mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter/index.js --reporter-options body=\"$PWD/body.hbs\",matrix=\"$PWD/matrix.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Test Interoperability Report 1.0\",helpers=\"$PWD/templateHelpers.js\",suiteLog='./suite.log' --timeout 15000"
+mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter --reporter-options body=\"$PWD/body.hbs\",matrix=\"$PWD/matrix.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Test Interoperability Report 1.0\",helpers=\"$PWD/templateHelpers.js\",suiteLog='./suite.log' --timeout 15000"
 ```
 
 ## Contributing
