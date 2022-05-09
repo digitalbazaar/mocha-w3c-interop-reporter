@@ -3,9 +3,10 @@
 var Mocha = require('mocha');
 var uuid = require('uuid');
 var Chalk = require('chalk');
-var path = require('path');
 var Handlebars = require('handlebars');
+var path = require('path');
 var fs = require('fs');
+var url = require('url');
 var util = require('util');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -69,39 +70,26 @@ const parents = (test, count = 0) => {
  * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
  */
 
-const config = {
-  title: 'W3C Interop Test',
-  dirs: {
-    // where to output the resulting HTML report
-    // if null we output to console.log
-    report: null
-  },
-  // where to log the resulting mocha root suite
-  // this can be used to generate test data
-  suiteLog: null,
-  // config options for the w3c respect library
-  respecConfig: path.join(__dirname, '..', 'respec.json'),
-  // where to find the templates for handlebars
-  templates: {
-    body: path.join(__dirname, '..', 'templates', 'body.hbs'),
-    head: path.join(__dirname, '..', 'templates', 'head.hbs'),
-    metrics: path.join(__dirname, '..', 'templates', 'metrics.hbs'),
-    table: path.join(__dirname, '..', 'templates', 'table.hbs'),
-    matrix: path.join(__dirname, '..', 'templates', 'matrix.hbs')
-  }
-};
-
-/*!
- * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
- */
-
 util.promisify(fs.readdir);
 const asyncWriteFile = util.promisify(fs.writeFile);
 const asyncReadFile = util.promisify(fs.readFile);
+const asyncRealPath = util.promisify(fs.realpath);
 
 const getPartial = async ({filePath, name}) => {
   const partial = await asyncReadFile(filePath, 'utf8');
   return Handlebars__default["default"].registerPartial(name, partial);
+};
+
+// es6 imports and exports don't support __dirname
+// so we need to use real path.
+const homeDir = async () => {
+  // gets the file url of this file
+  const fileUrl = url.fileURLToPath((typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('index.cjs', document.baseURI).href)));
+  // get the absolutepath of the file
+  const absolutePath = await asyncRealPath(fileUrl);
+  // go back one dir to get to home
+  const home = path.join(path.dirname(absolutePath), '..');
+  return home;
 };
 
 const noCircular = (key, value) => {
@@ -408,7 +396,7 @@ function formatStats({passes, tests, failures, pending}) {
  *
  * @returns {Promise<string>} An HTML report.
 */
-async function makeReport({suite, stats}) {
+async function makeReport({suite, stats, config}) {
   const {templates, respecConfig, title} = config;
   const reports = findReports({suite});
   const {summary = new Set()} = suite.suites.find(s => s.summary) || {};
@@ -432,7 +420,38 @@ async function makeReport({suite, stats}) {
  * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
  */
 
+const getConfig = async () => {
+  const homePath = await homeDir();
+  console.log({homePath});
+  return {
+    title: 'W3C Interop Test',
+    dirs: {
+      // where to output the resulting HTML report
+      // if null we output to console.log
+      report: null
+    },
+    // where to log the resulting mocha root suite
+    // this can be used to generate test data
+    suiteLog: null,
+    // config options for the w3c respect library
+    respecConfig: path.join(homePath, 'respec.json'),
+    // where to find the templates for handlebars
+    templates: {
+      body: path.join(homePath, 'templates', 'body.hbs'),
+      head: path.join(homePath, 'templates', 'head.hbs'),
+      metrics: path.join(homePath, 'templates', 'metrics.hbs'),
+      table: path.join(homePath, 'templates', 'table.hbs'),
+      matrix: path.join(homePath, 'templates', 'matrix.hbs')
+    }
+  };
+};
+
+/*!
+ * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
+ */
+
 const {
+  EVENT_RUN_BEGIN,
   EVENT_RUN_END,
   EVENT_TEST_FAIL,
   EVENT_TEST_PASS,
@@ -446,32 +465,11 @@ const {
  * @param {object} options - The command line options passed to mocha.
  */
 function InteropReporter(runner, options = {}) {
+  const config = {};
   // set config to the default configs
   this.config = config;
   // get the reporterOptions from mocha
   const {reporterOptions} = options;
-  // use the default config values as the defaults
-  const {
-    reportDir = config.dirs.report,
-    body = config.templates.body,
-    matrix = config.templates.matrix,
-    head = config.templates.head,
-    metrics = config.templates.metrics,
-    respec = config.respecConfig,
-    helpers = config.helpers,
-    suiteLog,
-    title = config.title
-  } = reporterOptions;
-  this.config.dirs.report = reportDir;
-  this.config.templates.body = body;
-  this.config.respecConfig = respec;
-  this.config.title = title;
-  this.config.helpers = helpers;
-  this.config.templates.matrix = matrix;
-  this.config.templates.head = head;
-  this.config.templates.metrics = metrics;
-  // this is a file path for a suite log
-  this.config.suiteLog = suiteLog;
   // inherit the base Mocha reporter
   Mocha__default["default"].reporters.Base.call(this, runner, options);
   // add a testId to suite and test
@@ -480,7 +478,31 @@ function InteropReporter(runner, options = {}) {
       item._testId = `urn:uuid:${uuid.v4()}`;
     });
   });
-  runner.on(EVENT_SUITE_BEGIN, function(suite) {
+  runner.on(EVENT_RUN_BEGIN, async function() {
+    // use the default config values as the defaults
+    const defaults = await getConfig();
+    const {
+      reportDir = defaults.dirs.report,
+      body = defaults.templates.body,
+      matrix = defaults.templates.matrix,
+      head = defaults.templates.head,
+      metrics = defaults.templates.metrics,
+      respec = defaults.respecConfig,
+      helpers = defaults.helpers,
+      suiteLog,
+      title = defaults.title
+    } = reporterOptions;
+    config.dirs.report = reportDir;
+    config.templates.body = body;
+    config.respecConfig = respec;
+    config.title = title;
+    config.helpers = helpers;
+    config.templates.matrix = matrix;
+    config.templates.head = head;
+    config.templates.metrics = metrics;
+    // this is a file path for a suite log
+    config.suiteLog = suiteLog;
+  }).on(EVENT_SUITE_BEGIN, function(suite) {
     console.log(spaces(parents(suite) * 2), suite.title);
   }).on(EVENT_TEST_PASS, test => {
     console.log(spaces(parents(test) * 2), Chalk__default["default"].green(passing), test.title);
@@ -494,16 +516,17 @@ function InteropReporter(runner, options = {}) {
       stats.forEach(stat => console.log(stat));
       const reportHTML = await makeReport({
         suite: this.suite,
-        stats
+        stats,
+        config
       });
       if(config.suiteLog) {
         writeJSON({path: config.suiteLog, data: this.suite});
       }
       // if there is no report dir return the html
-      if(!reportDir) {
+      if(!config.reportDir) {
         return reportHTML;
       }
-      await asyncWriteFile(`${reportDir}/index.html`, reportHTML);
+      await asyncWriteFile(`${config.reportDir}/index.html`, reportHTML);
     } catch(e) {
       console.error(e);
     }
