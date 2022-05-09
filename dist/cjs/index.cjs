@@ -528,10 +528,10 @@ function InteropReporter(runner, options = {}) {
         writeJSON({path: config.suiteLog, data: this.suite});
       }
       // if there is no report dir return the html
-      if(!config.reportDir) {
+      if(!reportDir) {
         return reportHTML;
       }
-      await asyncWriteFile(`${config.reportDir}/index.html`, reportHTML);
+      await asyncWriteFile(`${reportDir}/index.html`, reportHTML);
     } catch(e) {
       console.error(e);
     }
