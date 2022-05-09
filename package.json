@@ -2,8 +2,18 @@
   "name": "mocha-w3c-interop-reporter",
   "version": "0.0.1",
   "description": "Mocha reporter that produces reports that can be embedded in specs.",
-  "main": "lib/index.js",
-  "scripts": {},
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "exports": {
+    "require": "./dist/cjs/index.cjs",
+    "import": "./lib/index.js"
+  },
+  "scripts": {
+    "rollup": "rollup -c rollup.config.js",
+    "build": "npm run clear && npm run rollup",
+    "clear": "rimraf dist/ && mkdir dist",
+    "rebuild": "npm run clear && npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/digitalbazaar/mocha-w3c-interop-reporter.git"
@@ -24,17 +34,22 @@
   "homepage": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "esm": "^3.2.25",
     "handlebars": "^4.7.7",
     "mocha": "^8.3.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
     "eslint-config-digitalbazaar": "^3.0.0",
-    "eslint-plugin-jsdoc": "^39.2.9"
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.72.1"
   },
   "peerDependencies": {
     "mocha": ">= 6.0"
-  }
+  },
+  "files": [
+    "lib/*",
+    "dist/*"
+  ]
 }
