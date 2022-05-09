@@ -1,4 +1,5 @@
-const chai = require('chai');
+import chai from 'chai';
+
 const should = chai.should();
 export const shouldBeReport = (actualReport, expectedReport) => {
   should.exist(actualReport, 'Expected report to exist');

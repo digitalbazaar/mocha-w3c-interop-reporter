@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eslintrc.js",
+  "type": "module",
   "scripts": {
-    "test": "mocha mocha/ --timeout 1500"
+    "test": "mocha mocha/ --timeout 1500 --experimental-json-modules"
   },
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "chai": "^4.3.4",
-    "mocha": "^8.3.2"
+    "mocha": "^10.0.0"
   }
 }

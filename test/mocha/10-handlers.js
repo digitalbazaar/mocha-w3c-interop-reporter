@@ -3,11 +3,10 @@
  */
 'use strict';
 
-require = require('esm')(module);
+import chai from 'chai';
+import {formatStats} from '../../lib/handlers.js';
 
-const chai = require('chai');
 const should = chai.should();
-const {formatStats} = require('../../handlers');
 
 describe('Handlers.js', function() {
   it('should format stats with no errors', function() {
