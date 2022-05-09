@@ -3,30 +3,25 @@
  */
 'use strict';
 
-require = require('esm')(module);
-
-const {join} = require('path');
-const {singleMatrix, multipleMatrices} = require('../mock-data');
-const {makeReport} = require('../../generate');
-const {shouldBeReport} = require('../assertions');
-const {asyncReadFile, asyncWriteFile} = require('../../files');
-
-// FIXME remove this
-//const {asyncWriteFile} = require('../../files');
+import {join} from 'path';
+import {singleMatrix, multipleMatrices} from '../mock-data.js';
+import {makeReport} from '../../lib/generate.js';
+import {shouldBeReport} from '../assertions.js';
+import {asyncReadFile, asyncWriteFile} from '../../lib/files.js';
 
 describe('generate', async function() {
   it('should render a matrix', async function() {
     const report = await makeReport({suite: singleMatrix});
-    await asyncWriteFile(join(__dirname, '../single-report.html'), report);
+    await asyncWriteFile(join(process.cwd(), '../single-report.html'), report);
     const expectedReport = await asyncReadFile(
-      join(__dirname, '../single-report.html'));
+      join(process.cwd(), '../single-report.html'));
     shouldBeReport(report, expectedReport.toString());
   });
   it('should render multiple matrices', async function() {
     const report = await makeReport({suite: multipleMatrices});
-    await asyncWriteFile(join(__dirname, '../multiple-report.html'), report);
+    await asyncWriteFile(join(process.cwd(), '../multiple-report.html'), report);
     const expectedReport = await asyncReadFile(
-      join(__dirname, '../multiple-report.html'));
+      join(process.cwd(), '../multiple-report.html'));
     shouldBeReport(report, expectedReport.toString());
   });
 });
