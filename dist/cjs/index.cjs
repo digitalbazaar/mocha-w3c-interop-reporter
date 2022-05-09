@@ -73,7 +73,6 @@ const parents = (test, count = 0) => {
 util.promisify(fs.readdir);
 const asyncWriteFile = util.promisify(fs.writeFile);
 const asyncReadFile = util.promisify(fs.readFile);
-const asyncRealPath = util.promisify(fs.realpath);
 
 const getPartial = async ({filePath, name}) => {
   const partial = await asyncReadFile(filePath, 'utf8');
@@ -81,15 +80,23 @@ const getPartial = async ({filePath, name}) => {
 };
 
 // es6 imports and exports don't support __dirname
-// so we need to use real path.
-const homeDir = async () => {
+// so we need to use import.meta.url.
+const homeDir = () => {
   // gets the file url of this file
-  const fileUrl = url.fileURLToPath((typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('index.cjs', document.baseURI).href)));
-  // get the absolutepath of the file
-  const absolutePath = await asyncRealPath(fileUrl);
-  // go back one dir to get to home
-  const home = path.join(path.dirname(absolutePath), '..');
-  return home;
+  const dirPath = path.dirname(url.fileURLToPath((typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('index.cjs', document.baseURI).href))));
+  const packageName = 'mocha-w3c-interop-reporter';
+  if(dirPath.endsWith(packageName)) {
+    return dirPath;
+  }
+  if(dirPath.includes(packageName)) {
+    // get the last index for the package
+    const lastIndex = dirPath.lastIndexOf(packageName);
+    // return everything except the stuff after the packageName
+    return dirPath.substring(0, lastIndex + packageName.length);
+  }
+  // if for some reason this reporter ends up somewhere weird
+  // just return the filePath and hope for the best
+  return dirPath;
 };
 
 const noCircular = (key, value) => {
@@ -420,9 +427,9 @@ async function makeReport({suite, stats, config}) {
  * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
  */
 
-const getConfig = async () => {
-  const homePath = await homeDir();
-  console.log({homePath});
+const getConfig = () => {
+  const homePath = homeDir();
+  const templatesPath = path.join(homePath, 'templates');
   return {
     title: 'W3C Interop Test',
     dirs: {
@@ -437,11 +444,11 @@ const getConfig = async () => {
     respecConfig: path.join(homePath, 'respec.json'),
     // where to find the templates for handlebars
     templates: {
-      body: path.join(homePath, 'templates', 'body.hbs'),
-      head: path.join(homePath, 'templates', 'head.hbs'),
-      metrics: path.join(homePath, 'templates', 'metrics.hbs'),
-      table: path.join(homePath, 'templates', 'table.hbs'),
-      matrix: path.join(homePath, 'templates', 'matrix.hbs')
+      body: path.join(templatesPath, 'body.hbs'),
+      head: path.join(templatesPath, 'head.hbs'),
+      metrics: path.join(templatesPath, 'metrics.hbs'),
+      table: path.join(templatesPath, 'table.hbs'),
+      matrix: path.join(templatesPath, 'matrix.hbs')
     }
   };
 };
@@ -451,7 +458,6 @@ const getConfig = async () => {
  */
 
 const {
-  EVENT_RUN_BEGIN,
   EVENT_RUN_END,
   EVENT_TEST_FAIL,
   EVENT_TEST_PASS,
@@ -465,11 +471,34 @@ const {
  * @param {object} options - The command line options passed to mocha.
  */
 function InteropReporter(runner, options = {}) {
-  const config = {};
-  // set config to the default configs
-  this.config = config;
   // get the reporterOptions from mocha
   const {reporterOptions} = options;
+  // use the default config values as the config
+  const config = getConfig();
+  const {
+    reportDir = config.dirs.report,
+    body = config.templates.body,
+    matrix = config.templates.matrix,
+    head = config.templates.head,
+    metrics = config.templates.metrics,
+    respec = config.respecConfig,
+    helpers = config.helpers,
+    suiteLog,
+    title = config.title
+  } = reporterOptions;
+  // reassigned the new values to config
+  config.dirs.report = reportDir;
+  config.templates.body = body;
+  config.respecConfig = respec;
+  config.title = title;
+  config.helpers = helpers;
+  config.templates.matrix = matrix;
+  config.templates.head = head;
+  config.templates.metrics = metrics;
+  // this is a file path for a suite log
+  config.suiteLog = suiteLog;
+  // set config here
+  this.config = config;
   // inherit the base Mocha reporter
   Mocha__default["default"].reporters.Base.call(this, runner, options);
   // add a testId to suite and test
@@ -478,31 +507,7 @@ function InteropReporter(runner, options = {}) {
       item._testId = `urn:uuid:${uuid.v4()}`;
     });
   });
-  runner.on(EVENT_RUN_BEGIN, async function() {
-    // use the default config values as the defaults
-    const defaults = await getConfig();
-    const {
-      reportDir = defaults.dirs.report,
-      body = defaults.templates.body,
-      matrix = defaults.templates.matrix,
-      head = defaults.templates.head,
-      metrics = defaults.templates.metrics,
-      respec = defaults.respecConfig,
-      helpers = defaults.helpers,
-      suiteLog,
-      title = defaults.title
-    } = reporterOptions;
-    config.dirs.report = reportDir;
-    config.templates.body = body;
-    config.respecConfig = respec;
-    config.title = title;
-    config.helpers = helpers;
-    config.templates.matrix = matrix;
-    config.templates.head = head;
-    config.templates.metrics = metrics;
-    // this is a file path for a suite log
-    config.suiteLog = suiteLog;
-  }).on(EVENT_SUITE_BEGIN, function(suite) {
+  runner.on(EVENT_SUITE_BEGIN, function(suite) {
     console.log(spaces(parents(suite) * 2), suite.title);
   }).on(EVENT_TEST_PASS, test => {
     console.log(spaces(parents(test) * 2), Chalk__default["default"].green(passing), test.title);

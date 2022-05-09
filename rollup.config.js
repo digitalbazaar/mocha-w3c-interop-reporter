@@ -1,7 +1,5 @@
 import pkg from './package.json';
 
-console.log(Object.keys(pkg.dependencies).concat('fs'));
-
 export default {
   input: './lib/index.js',
   output: [
