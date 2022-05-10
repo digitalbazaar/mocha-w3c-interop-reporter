@@ -28,6 +28,9 @@
     "email": "support@digitalbazaar.com",
     "url": "https://digitalbazaar.com"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "bugs": {
     "url": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter/issues"
   },
