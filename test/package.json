@@ -10,6 +10,6 @@
   "author": "",
   "dependencies": {
     "chai": "^4.3.4",
-    "mocha": "^10.0.0"
+    "mocha": "^8.3.2"
   }
 }
