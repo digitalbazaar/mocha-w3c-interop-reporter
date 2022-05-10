@@ -1,8 +1,6 @@
 /*!
  * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-
 import chai from 'chai';
 import {formatStats} from '../../lib/handlers.js';
 

@@ -1,8 +1,6 @@
 /*!
  * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-
 import {join} from 'path';
 import {singleMatrix, multipleMatrices} from '../mock-data.js';
 import {makeReport} from '../../lib/generate.js';
