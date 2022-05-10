@@ -9,5 +9,5 @@ export default {
       format: 'cjs',
     }
   ],
-  external: Object.keys(pkg.dependencies).concat['path', 'fs', 'util']
+  external: [...Object.keys(pkg.dependencies), 'path', 'fs', 'util', 'url']
 };
