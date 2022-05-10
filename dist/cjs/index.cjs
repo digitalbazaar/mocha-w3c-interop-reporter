@@ -6,15 +6,14 @@ var Chalk = require('chalk');
 var Handlebars = require('handlebars');
 var path = require('path');
 var fs = require('fs');
+var url = require('url');
 var util = require('util');
-var appRoot = require('app-root-path');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var Mocha__default = /*#__PURE__*/_interopDefaultLegacy(Mocha);
 var Chalk__default = /*#__PURE__*/_interopDefaultLegacy(Chalk);
 var Handlebars__default = /*#__PURE__*/_interopDefaultLegacy(Handlebars);
-var appRoot__default = /*#__PURE__*/_interopDefaultLegacy(appRoot);
 
 /*!
  * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
@@ -78,6 +77,23 @@ const asyncReadFile = util.promisify(fs.readFile);
 const getPartial = async ({filePath, name}) => {
   const partial = await asyncReadFile(filePath, 'utf8');
   return Handlebars__default["default"].registerPartial(name, partial);
+};
+
+const packageRootPath = () => {
+  const dirPath = path.dirname(url.fileURLToPath((typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('index.cjs', document.baseURI).href))));
+  const packageName = 'mocha-w3c-interop-reporter';
+  if(dirPath.endsWith(packageName)) {
+    return dirPath;
+  }
+  if(dirPath.includes(packageName)) {
+    // get the last index for the package
+    const lastIndex = dirPath.lastIndexOf(packageName);
+    // return everything except the stuff after the packageName
+    return dirPath.substring(0, lastIndex + packageName.length);
+  }
+  // if for some reason this reporter ends up somewhere weird
+  // just return the filePath and hope for the best
+  return dirPath;
 };
 
 const noCircular = (key, value) => {
@@ -409,7 +425,7 @@ async function makeReport({suite, stats, config}) {
  */
 
 const getConfig = () => {
-  const rootPath = appRoot__default["default"].toString();
+  const rootPath = packageRootPath();
   const templatesPath = path.join(rootPath, 'templates');
   return {
     title: 'W3C Interop Test',
