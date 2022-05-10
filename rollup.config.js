@@ -9,5 +9,9 @@ export default {
       format: 'cjs',
     }
   ],
-  external: [...Object.keys(pkg.dependencies), 'path', 'fs', 'util', 'url']
+  external: [
+    ...Object.keys(pkg.dependencies),
+    ...Object.keys(pkg.peerDependencies),
+    'path', 'fs', 'util', 'url'
+  ]
 };

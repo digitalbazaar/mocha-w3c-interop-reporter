@@ -6,15 +6,14 @@ import {singleMatrix, multipleMatrices} from '../mock-data.js';
 import {makeReport} from '../../lib/generate.js';
 import {getConfig} from '../../lib/config.js';
 import {shouldBeReport} from '../assertions.js';
-import {asyncReadFile, asyncWriteFile} from '../../lib/files.js';
-import appRoot from 'app-root-path';
+import {asyncReadFile, asyncWriteFile, packageRootPath} from '../../lib/files.js';
 
 describe('generate', async function() {
   let config;
   let rootPath;
   before(async function() {
     config = await getConfig();
-    rootPath = appRoot.toString();
+    rootPath = packageRootPath();
   });
   it('should render a matrix', async function() {
     const report = await makeReport({suite: singleMatrix, config});
