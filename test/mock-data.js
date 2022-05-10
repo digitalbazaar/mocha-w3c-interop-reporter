@@ -1,4 +1,5 @@
-import singleMatrix from './single-matrix.json';
-import multipleMatrices from './multiple-matrix.json';
+import {createRequire} from 'module';
+const requireJson = createRequire(import.meta.url);
 
-export {singleMatrix, multipleMatrices};
+export const singleMatrix = requireJson('./single-matrix.json');
+export const multipleMatrices = requireJson('./multiple-matrix.json');
