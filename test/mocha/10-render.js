@@ -6,7 +6,8 @@ import {singleMatrix, multipleMatrices} from '../mock-data.js';
 import {makeReport} from '../../lib/generate.js';
 import {getConfig} from '../../lib/config.js';
 import {shouldBeReport} from '../assertions.js';
-import {asyncReadFile, asyncWriteFile, packageRootPath} from '../../lib/files.js';
+import {asyncReadFile, asyncWriteFile, packageRootPath} from
+  '../../lib/files.js';
 
 describe('generate', async function() {
   let config;
