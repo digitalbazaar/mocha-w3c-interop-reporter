@@ -8,6 +8,10 @@
     "require": "./dist/cjs/index.cjs",
     "import": "./lib/index.js"
   },
+  "files": [
+    "lib/*",
+    "dist/*"
+  ],
   "scripts": {
     "rollup": "rollup -c rollup.config.js",
     "build": "npm run clear && npm run rollup",
@@ -49,9 +53,5 @@
   },
   "peerDependencies": {
     "mocha": ">= 6.0"
-  },
-  "files": [
-    "lib/*",
-    "dist/*"
-  ]
+  }
 }
