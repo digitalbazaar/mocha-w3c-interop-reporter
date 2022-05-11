@@ -16,7 +16,7 @@
     "rollup": "rollup -c rollup.config.js",
     "build": "npm run clear && npm run rollup",
     "clear": "rimraf dist/ && mkdir dist",
-    "rebuild": "npm run clear && npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
