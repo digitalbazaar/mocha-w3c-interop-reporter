@@ -10,7 +10,8 @@
   },
   "files": [
     "lib/*",
-    "dist/*"
+    "dist/*",
+    "templates/*"
   ],
   "scripts": {
     "rollup": "rollup -c rollup.config.js",
