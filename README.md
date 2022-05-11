@@ -7,7 +7,7 @@ Is a mocha reporter that creates interoperability matrices in existing W3C docum
 Using npm
 
 ```bash
-npm i --save digitalbazaar/mocha-w3c-interop-reporter
+npm i --save mocha-w3c-interop-reporter
 ```
 
 ## Usage
