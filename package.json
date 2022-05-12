@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digitalbazaar/mocha-w3c-interop-reporter.git"
+    "url": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter.git"
   },
   "keywords": [
     "reporter",
