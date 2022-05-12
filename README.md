@@ -112,7 +112,7 @@ mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter 
 ```
 --reporter specifies the reporter and is required.
 
---reporter-options Passes options to the reporter in the form `*key*=value,`.
+--reporter-options Passes options to the reporter in the form `key=value,`.
 
   - *body* - Is a recommended reporter option that provides the body of the report.
          If no body is specified, the default `templates/body.hbs` file is used.
