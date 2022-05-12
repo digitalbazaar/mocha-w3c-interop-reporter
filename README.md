@@ -108,7 +108,7 @@ The templates are written in [Handlebars](https://handlebarsjs.com/).
 Most of the configuration options can be specified by command line options:
 
 ```
-mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter --reporter-options body=\"$PWD/body.hbs\",matrix=\"$PWD/matrix.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Test Interoperability Report 1.0\",helpers=\"$PWD/templateHelpers.js\",suiteLog='./suite.log' --timeout 15000"
+mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options body=\"$PWD/body.hbs\",matrix=\"$PWD/matrix.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Test Interoperability Report 1.0\",helpers=\"$PWD/templateHelpers.js\",suiteLog='./suite.log' --timeout 15000"
 ```
 --reporter specifies the reporter and is required.
 
