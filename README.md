@@ -100,7 +100,8 @@ export const getConfig = () => {
       matrix: join(templatesPath, 'matrix.hbs')
     }
   };
-};```
+};
+```
 
 The templates are written in [Handlebars](https://handlebarsjs.com/).
 
@@ -111,6 +112,7 @@ mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter 
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
