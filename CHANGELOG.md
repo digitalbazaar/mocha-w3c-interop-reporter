@@ -1,4 +1,4 @@
-# mocha-w3c-interop-reporter ChangeLog
+# @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
 ## 1.0.0 - TBD
 
