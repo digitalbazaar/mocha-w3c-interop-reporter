@@ -111,18 +111,26 @@ Most of the configuration options can be specified by command line options:
 mocha tests/ --require esm --reporter ./node_modules/mocha-w3c-interop-reporter --reporter-options body=\"$PWD/body.hbs\",matrix=\"$PWD/matrix.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Test Interoperability Report 1.0\",helpers=\"$PWD/templateHelpers.js\",suiteLog='./suite.log' --timeout 15000"
 ```
 --reporter specifies the reporter and is required.
+
 --reporter-options Passes options to the reporter in the form `key=value,`.
+
   body - Is a recommended reporter option that provides the body of the report.
          If no body is specified, the default `templates/body.hbs` file is used.
+
   matrix - Is an optional option that allows customization of matrix test results.
            If no matrix is specified, the default `templates/matrix.hbs` file is used.
+
   reportDir - Is an optional option that tells the reporter where to write the report HTML.
               If no `dir` is specified, no HTML is written.
+
   respec - Is a recommended reporter option that provides `respec` config data to `respec`.
            If no json file is specified, the default `./respec.json` is used.
+
   title - Is a recommended reporter option that sets the `title` of the report.
           Defaults to: 'W3C Interop Test'
+
   helpers - Is an optional reporter option that provides `handlebars` helpers usable in custom `*.hbs` files.
+
   suiteLog - Is an optional reporter option that dumps the raw mocha test results to a file.
 
 
