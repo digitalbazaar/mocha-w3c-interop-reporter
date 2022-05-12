@@ -1,6 +1,6 @@
 {
-  "name": "mocha-w3c-interop-reporter",
-  "version": "0.0.1",
+  "name": "@digitalbazaar/mocha-w3c-interop-reporter",
+  "version": "1.0.0",
   "description": "Mocha reporter that produces reports that can be embedded in specs.",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
