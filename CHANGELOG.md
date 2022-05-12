@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.0.0 - TBD
+## 1.0.0 - 2022-05-12
 
 ### Added
 - Add initial release files.
