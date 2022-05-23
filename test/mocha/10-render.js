@@ -9,6 +9,13 @@ import {shouldBeReport} from '../assertions.js';
 import {asyncReadFile, asyncWriteFile, packageRootPath} from
   '../../lib/files.js';
 
+const stats = [
+  'Tests passed 32/42 76%',
+  'Tests failed 10/42 24%',
+  'Tests skipped 0',
+  'Total tests 42'
+];
+
 describe('generate', async function() {
   let config;
   let rootPath;
@@ -17,14 +24,14 @@ describe('generate', async function() {
     rootPath = packageRootPath();
   });
   it('should render a matrix', async function() {
-    const report = await makeReport({suite: singleMatrix, config});
+    const report = await makeReport({suite: singleMatrix, stats, config});
     await asyncWriteFile(join(rootPath, 'test/single-report.html'), report);
     const expectedReport = await asyncReadFile(
       join(rootPath, 'test/single-report.html'));
     shouldBeReport(report, expectedReport.toString());
   });
   it('should render multiple matrices', async function() {
-    const report = await makeReport({suite: multipleMatrices, config});
+    const report = await makeReport({suite: multipleMatrices, stats, config});
     await asyncWriteFile(join(rootPath, 'test/multiple-report.html'), report);
     const expectedReport = await asyncReadFile(
       join(rootPath, 'test/multiple-report.html'));
