@@ -1,0 +1,32 @@
+<section id="sotd">
+  {{#each stats}}
+  <p>
+  {{this}}
+  </p>
+  {{/each}}
+  <p>
+    These tests were run on <time>{{today}}</time>
+  </p>
+</section>
+
+<section class="informative" id="conformance-testing-results">
+  <h2> Conformance Testing Results </h2>
+  <section class="informative" id="Key">
+    <h3>Key</h3>
+    <ul>
+      <li>
+✓ - Success
+      </li>
+      <li>
+❌ - Error
+      </li>
+      <li>
+— - Implementation explicitly does not support this feature
+      </li>
+    </ul>
+  </section>
+
+  <p>
+  The results of the tests are shown below:
+  </p>
+</section>
