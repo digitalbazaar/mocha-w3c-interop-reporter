@@ -1,9 +1,4 @@
 <section id='abstract'>
   abstract is required
 </section>
-<section id="sotd">
-  sotd is required
-  {{#each stats}}
-  {{this}}
-  {{/each}}
-</section>
+{{> test-statistics.hbs stats=stats}}
