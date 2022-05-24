@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.1.0 -
+## 1.1.0 - 2022-05-24
 
 ### Added
 - Add a new helper `{{today}}` usable in templates.
