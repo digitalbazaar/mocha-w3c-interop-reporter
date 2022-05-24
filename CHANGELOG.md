@@ -10,7 +10,7 @@
 
 ### Fixed
 - Moved test statistics to the Conformance section instead of Status of this Document.
-- Language option allows UTC Datetime stamps to be in any language.
+- Respec Language option allows UTC Datetime stamps to be in any language.
 
 ## 1.1.0 - 2022-05-24
 
