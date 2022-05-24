@@ -114,7 +114,9 @@ mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-opt
 
 - `--reporter-options` - Passes options to the reporter in the form `key=value[,key2=value[,...]]`.
 
-  - *body* - Is a recommended reporter option that provides the body of the report.
+  - *abstract* - Is a recommended reporter option that provides the abstract for a report.
+
+  - *body* - Is an optional reporter option that provides the body of the report.
          If no body is specified, the default `templates/body.hbs` file is used.
 
   - *matrix* - Is an optional option that allows customization of matrix test results.
