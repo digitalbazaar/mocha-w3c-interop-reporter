@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.2.0 -
+## 1.2.0 - 2022-05-25
 
 ### Added
 - Add a new template `abstract.hbs` and set it via `abstract=abstract.hbs`.
