@@ -24,14 +24,22 @@ describe('generate', async function() {
     rootPath = packageRootPath();
   });
   it('should render a matrix', async function() {
-    const report = await makeReport({suite: singleMatrix, stats, config});
+    const report = await makeReport({
+      suite: singleMatrix,
+      stats,
+      config: {...config}
+    });
     await asyncWriteFile(join(rootPath, 'test/single-report.html'), report);
     const expectedReport = await asyncReadFile(
       join(rootPath, 'test/single-report.html'));
     shouldBeReport(report, expectedReport.toString());
   });
   it('should render multiple matrices', async function() {
-    const report = await makeReport({suite: multipleMatrices, stats, config});
+    const report = await makeReport({
+      suite: multipleMatrices,
+      stats,
+      config: {...config}
+    });
     await asyncWriteFile(join(rootPath, 'test/multiple-report.html'), report);
     const expectedReport = await asyncReadFile(
       join(rootPath, 'test/multiple-report.html'));
