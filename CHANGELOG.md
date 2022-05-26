@@ -3,7 +3,7 @@
 ## 1.2.1 -
 
 ### Fixed
-- Fixed reporter option so helpers files can be passed in.
+- Fix reporter option so `helpers` file can be passed in.
 
 ## 1.2.0 - 2022-05-25
 
