@@ -1,5 +1,10 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.2.1 -
+
+### Fixed
+- Fixed reporter option so helpers files can be passed in.
+
 ## 1.2.0 - 2022-05-25
 
 ### Added
