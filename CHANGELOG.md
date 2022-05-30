@@ -1,5 +1,10 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.2.2 - 
+
+### Fixed
+- Adds a NaN check to the percent method.
+
 ## 1.2.1 - 2022-05-26
 
 ### Fixed
