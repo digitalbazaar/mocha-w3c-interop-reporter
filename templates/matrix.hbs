@@ -33,6 +33,21 @@
    pre, code.hljs{
      overflow: auto;
    }
+   .hide {
+     display: none;
+   }
+   .err {
+     position: absolute;
+     background-color: white;
+     width: 50%;
+   }
+   .highlight-on-hover:hover {
+     background-color: yellow;
+   }
+   .highlight-on-hover:hover + .err {
+     display: block;
+     z-index: 1;
+   }
   </style>
   <div class="row justify-center">
     <table class="simple">
@@ -56,7 +71,14 @@
         <td class="subtest">{{id}}</td>
         <!--These contain if the test passed, failed, or was skipped-->
         {{#each cells}}
-          <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
+          <td class="{{state}} {{getOptional optional}} highlight-on-hover">
+            <div class= "highlight-on-hover">{{getStatusMark state}}</div>
+            {{#if err}}
+              <div class="err hide">
+                <pre style="white-space: break-spaces; word-break: break-all;">{{{formatJSON err}}}</pre>
+              </div>
+            {{/if}}
+          </td>
         {{/each}}
       </tr>
     {{/each}}
