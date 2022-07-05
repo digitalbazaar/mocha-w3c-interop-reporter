@@ -1,6 +1,9 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.2.2 - 
+## 1.3.0 - 
+
+### Added
+- Added an `:hover` selector to `matrix.hbs` that shows test errors.
 
 ### Fixed
 - Adds a NaN check to the percent method.
