@@ -15,6 +15,7 @@ describe('Handlers.js', function() {
     const expectedResult = [
       `Tests passed ${passes}/${tests} 100%`,
       `Tests failed ${failures}/${tests} 0%`,
+      `Failures ${failures}`,
       `Tests skipped ${pending}`,
       `Total tests ${tests}`
     ];
@@ -37,6 +38,7 @@ describe('Handlers.js', function() {
     const expectedResult = [
       `Tests passed ${passes}/${tests} 50%`,
       `Tests failed ${failures}/${tests} 50%`,
+      `Failures ${failures}`,
       `Tests skipped ${pending}`,
       `Total tests ${tests}`
     ];
@@ -60,6 +62,7 @@ describe('Handlers.js', function() {
     const expectedResult = [
       `Tests passed ${passes}/${tests} 0%`,
       `Tests failed ${failures}/${tests} 100%`,
+      `Failures ${failures}`,
       `Tests skipped ${pending}`,
       `Total tests ${tests}`
     ];
@@ -82,6 +85,7 @@ describe('Handlers.js', function() {
     const expectedResult = [
       `Tests passed ${passes}/${tests} 34%`,
       `Tests failed ${failures}/${tests} 66%`,
+      `Failures ${failures}`,
       `Tests skipped ${pending}`,
       `Total tests ${tests}`
     ];
@@ -104,6 +108,7 @@ describe('Handlers.js', function() {
     const expectedResult = [
       `Tests passed ${passes}/${tests} 99%`,
       `Tests failed ${failures}/${tests} 1%`,
+      `Failures ${failures}`,
       `Tests skipped ${pending}`,
       `Total tests ${tests}`
     ];
