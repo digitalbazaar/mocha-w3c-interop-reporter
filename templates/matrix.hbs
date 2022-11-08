@@ -33,7 +33,7 @@
    .highlight-on-hover:hover {
      background-color: yellow;
    }
-   .highlight-on-hover:hover + .err {
+   .highlight-on-hover:hover + .relative-pos > .err {
      display: block;
      z-index: 1;
    }
@@ -46,8 +46,9 @@
    }
    .err {
      position: absolute;
-     background-color: white;
-     width: 50%;
+     width: 50rem;
+     left: -150px;
+     background: rgba(255, 255, 255, 0.0);
    }
    pre, code.hljs {
      overflow: auto;
@@ -61,6 +62,13 @@
      word-break: break-all;
      margin: 0;
      padding: 0;
+   }
+   .relative-pos:hover > .err {
+     display: block;
+     z-index: 1;
+   }
+   .relative-pos {
+     position: relative;
    }
   </style>
   <div class="row justify-center">
