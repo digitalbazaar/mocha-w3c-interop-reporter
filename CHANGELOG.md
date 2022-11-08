@@ -3,10 +3,11 @@
 ## 1.3.0 - 
 
 ### Added
-- Added an `:hover` selector to `matrix.hbs` that shows test errors.
+- Add an `:hover` selector to `matrix.hbs` that shows test errors.
+- Add a new template option error for displaying test errors.
 
 ### Fixed
-- Adds a NaN check to the percent method.
+- Add a NaN check to the percent method.
 
 ## 1.2.1 - 2022-05-26
 
