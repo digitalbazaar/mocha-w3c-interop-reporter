@@ -35,40 +35,17 @@
    }
    .highlight-on-hover:hover + .relative-pos > .err {
      display: block;
-     z-index: 1;
-   }
-   .hide {
-     display: none;
-   }
-   .no-space-around {
-     margin: 0;
-     padding: 0;
-   }
-   .err {
-     position: absolute;
-     width: 50rem;
-     left: -150px;
-     background: rgba(255, 255, 255, 0.0);
    }
    pre, code.hljs {
      overflow: auto;
    }
-   code > span.hljs-attr {
-     margin-left: 1rem;
-   }
-   pre {
-     width: 75%;
-     white-space: pre-line;
-     word-break: break-all;
-     margin: 0;
-     padding: 0;
+   .relative-pos {
+     position: relative;
+     width: 0.5rem;
+     z-index: 1;
    }
    .relative-pos:hover > .err {
      display: block;
-     z-index: 1;
-   }
-   .relative-pos {
-     position: relative;
    }
   </style>
   <div class="row justify-center">
