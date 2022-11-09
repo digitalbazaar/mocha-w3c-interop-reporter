@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.3.0 - 
+## 1.3.0 - 2022-11-09
 
 ### Added
 - Add an `:hover` selector to `matrix.hbs` that shows test errors.
