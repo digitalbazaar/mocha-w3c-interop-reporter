@@ -8,7 +8,7 @@
      z-index: 1;
      width: 50rem;
      right: calc(0% + 15rem);
-     background: rgba(255, 255, 255, 0.0);
+     background: rgba(0, 0, 0, 0.0);
    }
    .no-space-around {
      margin: 0;
@@ -26,9 +26,9 @@
      margin-left: 1rem;
    }
   </style>
+  {{#if error}}
   <span class="err hide no-space-around">
-    {{#if error}}
-      <pre>{{{formatJSON error}}}</pre>
-    {{/if}}
+    <pre>{{{formatError error}}}</pre>
   </span>
+  {{/if}}
 </div>
