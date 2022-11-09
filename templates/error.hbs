@@ -1,4 +1,30 @@
 <div class="relative-pos">
+  <style>
+   .hide {
+     display: none;
+   }
+   .err {
+     position: relative;
+     z-index: 2;
+     width: 50rem;
+     left: -150px;
+     background: rgba(255, 255, 255, 0.0);
+   }
+   .no-space-around {
+     margin: 0;
+     padding: 0;
+   }
+   pre {
+     width: 75%;
+     white-space: pre-line;
+     word-break: break-all;
+     margin: 0;
+     padding: 0;
+   }
+   code > span.hljs-attr {
+     margin-left: 1rem;
+   }
+  </style>
   <span class="err hide no-space-around">
     {{#if error}}
       <pre>{{{formatJSON error}}}</pre>
