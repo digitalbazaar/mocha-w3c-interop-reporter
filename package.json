@@ -8,6 +8,9 @@
     "require": "./dist/cjs/index.cjs",
     "import": "./lib/index.js"
   },
+  "bin": {
+    "makeReport": "./bin/makeReport.js"
+  },
   "files": [
     "lib/*",
     "dist/*",
