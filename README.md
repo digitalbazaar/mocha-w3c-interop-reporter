@@ -135,6 +135,12 @@ mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-opt
 
   - *suiteLog* - Is an optional reporter option that dumps the raw mocha test results to a file.
 
+The reporter also has an npx binary for creating test html manually from mocha suites.
+This can be used to debug results with out having to rerun an entire test suite.
+
+```
+npx makeReport --suite=./suite.log --output=./reports/manualReport.html
+```
 
 ## Contributing
 
