@@ -7,26 +7,33 @@ import {argv} from 'node:process';
 import {getConfig} from '../lib/config.js';
 import {getJson} from '../lib/files.js';
 import {makeReport} from '../lib/generate.js';
+import {writeFile} from 'node:fs/promises';
 
 async function main() {
   console.log('w3c interop reporter make report cli');
   console.log('options: --suite=./path/to/suite');
-  console.log('options: --config=./path/to/config');
-  console.log('options: --output=./output.html');
+  console.log('options (optional): --config=./path/to/config');
+  console.log('options (optional): --output=./output.html');
   // capture the command and path
   const commandParser = /^-{2}(?<command>\D+)=(?<path>.+)$/i;
+  const commands = {};
   // first 2 args are always node and file location
-  const commands = await argv.slice(2).reduce(async (acc, current) => {
-    const parsed = commandParser.exec(current);
+  for(const _command of argv.slice(2)) {
+    const parsed = commandParser.exec(_command);
     if(!parsed) {
-      throw new Error(`invalid command ${current}`);
+      throw new Error(`invalid command ${_command}`);
     }
-    const {groups} = parsed;
-    const json = await getJson(groups.path);
-    acc[groups.command] = json;
-    return acc;
-  }, {});
-  console.log({commands});
+    const {groups: {command, path} = {}} = parsed;
+    // don't try to open the output file
+    if(command === 'output') {
+      commands[command] = path;
+      continue;
+    }
+    // open either suite or config
+    const json = await getJson(path);
+    commands[command] = json;
+    continue;
+  }
   const html = await makeReport({
     // no stats by default
     stats: [],
@@ -34,8 +41,12 @@ async function main() {
     config: getConfig(),
     ...commands
   });
-  // print out the html
-  console.log(html);
+  if(commands.output) {
+    await writeFile(commands.output, html);
+  } else {
+    // print out the html
+    console.log(html);
+  }
 }
 
 main();
