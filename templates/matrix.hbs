@@ -72,7 +72,7 @@
         <td class="subtest">{{id}}</td>
         <!--These contain if the test passed, failed, or was skipped-->
         {{#each cells}}
-          <td class="{{state}} {{getOptional optional}} highlight-on-hover">
+          <td class="{{state}} {{getOptional optional}} highlight-on-hover text-center">
             <div class= "highlight-on-hover">{{getStatusMark state}}</div>
             {{> error.hbs error=err}}
           </td>
