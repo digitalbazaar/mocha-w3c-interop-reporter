@@ -1,5 +1,10 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+### 1.4.1 -
+
+### Fixed
+- Removed flex justify-center from conformance table to ensure normal spec layout.
+
 ## 1.4.0 -
 
 ### Added
