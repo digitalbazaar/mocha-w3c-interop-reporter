@@ -13,7 +13,7 @@
    .text-left {
       text-align: left;
     }
-   .text-center {
+   .text-center, th.text-center {
      text-align: center;
    }
    .qr-code {
@@ -59,7 +59,7 @@
           </div>
         </th>
           {{#each matrix.columns}}
-            <th class="no-wrap small-font">{{this}}</th>
+            <th class="no-wrap small-font text-center">{{this}}</th>
           {{/each}} 
         </thead>
       <tbody>
