@@ -7,6 +7,7 @@
 
 ### Fixed
 - Removed flex justify-center from conformance table to ensure normal spec layout.
+- Added centering for implementation names in matrix.
 
 ## 1.3.0 - 2022-11-09
 
