@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.4.0 -
+## 1.4.0 - 2023-07-25
 
 ### Added
 - If an implementation fails to run a test mark the test pending.
