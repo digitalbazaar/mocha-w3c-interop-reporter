@@ -3,7 +3,7 @@
 ## 1.5.0 -
 
 ### Added
-- A new npm binary `npx makeReport` for manually creating reports from mocha suites.
+- A new npm binary `npx interopReporter makeReport` for manually creating reports from mocha suites.
 
 ## 1.4.0 - 2023-07-25
 
