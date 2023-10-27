@@ -139,7 +139,7 @@ The reporter also has an npx binary for creating test html manually from mocha s
 This can be used to debug results with out having to rerun an entire test suite.
 
 ```
-npx makeReport --suite=./suite.log --output=./reports/manualReport.html
+npx interopReporter makeReport --suiteLog=./suite.log --output=./reports/manualReport.html
 ```
 
 ## Contributing
