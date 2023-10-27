@@ -29,7 +29,7 @@ yargs(hideBin(argv))
         })
         .option('output', {
           type: 'string',
-          describe: 'An optional path to write the resulting HTML to.',
+          describe: 'An optional path to write the resulting HTML to',
           demandOption: false
         })
     }
