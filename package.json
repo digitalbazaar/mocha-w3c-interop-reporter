@@ -9,7 +9,7 @@
     "import": "./lib/index.js"
   },
   "bin": {
-    "makeReport": "./bin/makeReport.js"
+    "interopReporter": "./bin/bin.js"
   },
   "files": [
     "lib/*",
