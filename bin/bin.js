@@ -36,10 +36,9 @@ yargs(hideBin(argv))
   ).demandCommand().argv;
 
 async function makeReportHandler(commands) {
+  const output = commands?.output;
   const config = commands?.config ?
     (await getJson(commands.config)) : getConfig();
-  const output = commands?.output ?
-    (await getJson(commands.ouput)) : false;
   const suite = commands?.suiteLog ?
     (await getJson(commands.suiteLog)) : false;
   const html = await makeReport({
