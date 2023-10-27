@@ -13,7 +13,7 @@ yargs(hideBin(argv))
   .usage('Usage: $0 <command>')
   .command(
     'makeReport',
-    'Turns a mocha suite log into a report',
+    'Turns a mocha suite log into an HTML report',
     {
       handler: makeReportHandler,
       builder: _yargs => _yargs
