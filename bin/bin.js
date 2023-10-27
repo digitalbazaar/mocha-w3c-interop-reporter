@@ -10,6 +10,7 @@ import {hideBin} from 'yargs/helpers';
 
 yargs(hideBin(argv))
   .scriptName('interopReporter')
+  .usage('Usage: $0 <command>')
   .command(
     'makeReport',
     'Turns a mocha suite log into a report',
@@ -32,7 +33,7 @@ yargs(hideBin(argv))
           demandOption: false
         })
     }
-  ).parse();
+  ).demandCommand().argv;
 
 async function makeReportHandler(commands) {
   const config = commands?.config ?
