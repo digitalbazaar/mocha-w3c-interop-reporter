@@ -1,52 +1,57 @@
 #!/usr/bin/env node
 
-/*!
- * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
- */
 import {argv} from 'node:process';
 import {getConfig} from '../lib/config.js';
 import {getJson} from '../lib/files.js';
 import {makeReport} from '../lib/generate.js';
 import {writeFile} from 'node:fs/promises';
+import yargs from 'yargs';
+import {hideBin} from 'yargs/helpers';
 
-async function main() {
-  console.log('w3c interop reporter make report cli');
-  console.log('options: --suite=./path/to/suite');
-  console.log('options (optional): --config=./path/to/config');
-  console.log('options (optional): --output=./output.html');
-  // capture the command and path
-  const commandParser = /^-{2}(?<command>\D+)=(?<path>.+)$/i;
-  const commands = {};
-  // first 2 args are always node and file location
-  for(const _command of argv.slice(2)) {
-    const parsed = commandParser.exec(_command);
-    if(!parsed) {
-      throw new Error(`invalid command ${_command}`);
+yargs(hideBin(argv))
+  .scriptName('interopReporter')
+  .command(
+    'makeReport',
+    'Turns a mocha suite log into a report',
+    {
+      handler: makeReportHandler,
+      builder: _yargs => _yargs
+        .option('suiteLog', {
+          type: 'string',
+          describe: 'A path to a mocha suite log',
+          demandOption: true
+        })
+        .option('config', {
+          type: 'string',
+          describe: 'An optional path to an interop reporter config file',
+          demandOption: false
+        })
+        .option('output', {
+          type: 'string',
+          describe: 'An optional path to write the resulting HTML to.',
+          demandOption: false
+        })
     }
-    const {groups: {command, path} = {}} = parsed;
-    // don't try to open the output file
-    if(command === 'output') {
-      commands[command] = path;
-      continue;
-    }
-    // open either suite or config
-    const json = await getJson(path);
-    commands[command] = json;
-    continue;
-  }
+  ).parse();
+
+async function makeReportHandler(commands) {
+  const config = commands?.config ?
+    (await getJson(commands.config)) : getConfig();
+  const output = commands?.output ?
+    (await getJson(commands.ouput)) : false;
+  const suite = commands?.suiteLog ?
+    (await getJson(commands.suiteLog)) : false;
   const html = await makeReport({
     // no stats by default
     stats: [],
     // use default config
-    config: getConfig(),
-    ...commands
+    config,
+    suite
   });
-  if(commands.output) {
-    await writeFile(commands.output, html);
+  if(output) {
+    await writeFile(output, html);
   } else {
     // print out the html
     console.log(html);
   }
 }
-
-main();
