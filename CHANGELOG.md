@@ -4,6 +4,7 @@
 
 ### Added
 - A new npm binary `npx interopReporter makeReport` for manually creating reports from mocha suites.
+- A new reporter option `templateData` that outputs the data used to make the html report as json.
 
 ## 1.4.0 - 2023-07-25
 
