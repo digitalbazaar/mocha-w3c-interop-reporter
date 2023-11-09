@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.5.0 -
+## 1.5.0 - 2023-11-09
 
 ### Added
 - A new npm binary `npx interopReporter makeReport` for manually creating reports from mocha suites.
