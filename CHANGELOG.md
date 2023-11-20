@@ -1,5 +1,11 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.6.0 - 2023-11-09
+
+### Changed
+- Update status mark for `pending` from 🛑 to 🚫 and update the corresponding
+  error message.
+
 ## 1.5.0 - 2023-11-09
 
 ### Added
