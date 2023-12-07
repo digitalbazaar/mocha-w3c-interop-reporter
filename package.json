@@ -38,7 +38,7 @@
     "url": "https://digitalbazaar.com"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "bugs": {
     "url": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter/issues"
