@@ -28,6 +28,7 @@
               "_testId": "urn:uuid:7d556c3e-3a4a-48da-bb11-a357c4ddb7f9",
               "_events": {},
               "_eventsCount": 1,
+              "link": "https://example.com/",
               "cell": {
                 "columnId": "Danube Tech",
                 "rowId": "MUST successfully issue a credential."
@@ -534,6 +535,7 @@
               "_testId": "urn:uuid:ac8ba57f-1e9a-4a6d-87a1-37b7e6731428",
               "_events": {},
               "_eventsCount": 1,
+              "link": "https://example.com/",
               "cell": {
                 "columnId": "Digital Bazaar",
                 "rowId": "MUST successfully issue a credential."
@@ -1140,6 +1142,7 @@
               "_testId": "urn:uuid:59b50b61-bece-4e8b-a8ed-5f0c5e1f9a02",
               "_events": {},
               "_eventsCount": 1,
+              "link": "https://example.com/",
               "cell": {
                 "columnId": "SecureKey",
                 "rowId": "MUST successfully issue a credential."
@@ -1647,6 +1650,7 @@
           "_testId": "urn:uuid:7d556c3e-3a4a-48da-bb11-a357c4ddb7f9",
           "_events": {},
           "_eventsCount": 1,
+          "link": "https://example.com/",
           "cell": {
             "columnId": "Danube Tech",
             "rowId": "MUST successfully issue a credential."
@@ -2131,6 +2135,7 @@
           "_testId": "urn:uuid:ac8ba57f-1e9a-4a6d-87a1-37b7e6731428",
           "_events": {},
           "_eventsCount": 1,
+          "link": "https://example.com/",
           "cell": {
             "columnId": "Digital Bazaar",
             "rowId": "MUST successfully issue a credential."
@@ -2715,6 +2720,7 @@
           "_testId": "urn:uuid:59b50b61-bece-4e8b-a8ed-5f0c5e1f9a02",
           "_events": {},
           "_eventsCount": 1,
+          "link": "https://example.com/",
           "cell": {
             "columnId": "SecureKey",
             "rowId": "MUST successfully issue a credential."
