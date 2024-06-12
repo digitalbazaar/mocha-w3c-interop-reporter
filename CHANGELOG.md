@@ -1,5 +1,14 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.x.x - 2024-mm-dd
+
+### Added
+- Tests can now provide `this.test.link` to link test names to a destination
+  (typically a browser highlight URL: `:~:text=`).
+
+### Changed
+- Icon key area now lists all available status icons in the Key section.
+
 ## 1.6.0 - 2023-11-27
 
 ### Changed
