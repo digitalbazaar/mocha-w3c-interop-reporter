@@ -25,6 +25,51 @@
   code > span.hljs-attr {
     margin-left: 1rem;
   }
+  .no-wrap {
+    white-space: nowrap;
+  }
+  td.optional {
+    background-color: #b9b7b7;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-center, th.text-center {
+    text-align: center;
+  }
+  .qr-code {
+    margin-left: 25px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .small-font {
+    font-size: 0.75rem;
+  }
+  .highlight-on-hover:hover {
+    background-color: yellow;
+    cursor: default;
+  }
+  .highlight-on-hover:hover + .relative-pos > .err {
+    display: block;
+  }
+  pre, code.hljs {
+    overflow: auto;
+  }
+  .relative-pos {
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    z-index: 1;
+  }
+  .relative-pos:hover > .err {
+    display: block;
+  }
 </style>
 {{> abstract.hbs}}
 {{> test-statistics.hbs stats=stats}}
