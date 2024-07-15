@@ -3,21 +3,21 @@
   .hide {
     display: none;
   }
-  .err {
+  details.hide {
+    display: none;
+  }
+  details.err {
     position: absolute;
     z-index: 1;
     white-space: nowrap;
-    left: -15rem;
-    background: rgba(0, 0, 0, 0.0);
-  }
-  .err details {
     background: white;
     border: 1px solid darkgray;
     text-align: left;
     padding: .1em .5em;
     box-shadow: 0 0 5px darkgray;
+    min-width: 25em;
   }
-  .err details summary {
+  details.err summary {
     color: indianred;
   }
   .no-space-around {
