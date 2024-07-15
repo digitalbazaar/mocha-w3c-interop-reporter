@@ -1,7 +1,10 @@
 <div class="relative-pos">
   {{#if error}}
-  <span class="err hide no-space-around">
-    <pre>{{{formatError error}}}</pre>
-  </span>
+  <div class="err hide">
+    <details>
+      <summary>{{error.message}}:</summary>
+      <pre>{{error.stack}}</pre>
+    </details>
+  </div>
   {{/if}}
 </div>

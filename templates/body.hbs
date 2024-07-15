@@ -4,11 +4,21 @@
     display: none;
   }
   .err {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    width: 50rem;
-    right: calc(0% + 15rem);
+    white-space: nowrap;
+    left: -15rem;
     background: rgba(0, 0, 0, 0.0);
+  }
+  .err details {
+    background: white;
+    border: 1px solid darkgray;
+    text-align: left;
+    padding: .1em .5em;
+    box-shadow: 0 0 5px darkgray;
+  }
+  .err details summary {
+    color: indianred;
   }
   .no-space-around {
     margin: 0;
