@@ -1,10 +1,8 @@
 <div class="relative-pos">
   {{#if error}}
-  <div class="err hide">
-    <details>
-      <summary>{{error.message}}:</summary>
-      <pre>{{error.stack}}</pre>
-    </details>
-  </div>
+  <details class="err hide">
+    <summary>{{error.message}}:</summary>
+    <pre>{{error.stack}}</pre>
+  </details>
   {{/if}}
 </div>
