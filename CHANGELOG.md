@@ -3,6 +3,7 @@
 ## 1.x.x - 2024-mm-dd
 
 ### Added
+- Improve error message display on mouse over.
 - Tests can now provide `this.test.link` to link test names to a destination
   (typically a browser highlight URL: `:~:text=`).
 
