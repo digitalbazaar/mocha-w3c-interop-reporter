@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.x.x - 2024-mm-dd
+## 1.7.0 - 2024-07-22
 
 ### Added
 - Improve error message display on mouse over.
