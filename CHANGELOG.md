@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.8.0 -
+## 1.8.0 - 2024-09-10
 
 ### Added
 - Skipped tests show either `skipMessage`, error, or `Test Skipped`.
