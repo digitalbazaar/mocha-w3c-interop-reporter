@@ -1,5 +1,10 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.8.1 -
+
+### Fixed
+- Removed extraneous console.log.
+
 ## 1.8.0 - 2024-09-10
 
 ### Added
