@@ -52,7 +52,6 @@ describe('Handlers.js', function() {
     actualResult.should.be.an('array');
     actualResult.length.should.equal(expectedResult.length);
     actualResult.should.eql(expectedResult);
-
   });
   it('should format stats with all errors', function() {
     const passes = 0;
