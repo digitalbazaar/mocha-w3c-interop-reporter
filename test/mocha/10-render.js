@@ -2,7 +2,7 @@
  * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
  */
 import {join} from 'path';
-import {singleMatrix, multipleMatrices} from '../mock-data.js';
+import {highlightMatrix, singleMatrix, multipleMatrices} from '../mock-data.js';
 import {makeReport} from '../../lib/generate.js';
 import {getConfig} from '../../lib/config.js';
 import {shouldBeReport} from '../assertions.js';
@@ -43,6 +43,17 @@ describe('generate', async function() {
     await asyncWriteFile(join(rootPath, 'test/multiple-report.html'), report);
     const expectedReport = await asyncReadFile(
       join(rootPath, 'test/multiple-report.html'));
+    shouldBeReport(report, expectedReport.toString());
+  });
+  it('should highlight rows with less than 2 passes', async function() {
+    const report = await makeReport({
+      suite: highlightMatrix,
+      stats,
+      config: {...config}
+    });
+    await asyncWriteFile(join(rootPath, 'test/highlight-report.html'), report);
+    const expectedReport = await asyncReadFile(
+      join(rootPath, 'test/highlight-report.html'));
     shouldBeReport(report, expectedReport.toString());
   });
 });
