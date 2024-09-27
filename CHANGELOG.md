@@ -1,5 +1,10 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.9.0 -
+
+### Added
+- A new section highlights at risk normative statements.
+
 ## 1.8.1 - 2024-09-12
 
 ### Fixed
