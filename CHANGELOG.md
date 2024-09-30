@@ -1,5 +1,10 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.9.1 -
+
+### Fixed
+- Do not show empty matrices.
+
 ## 1.9.0 - 2024-09-30
 
 ### Added
