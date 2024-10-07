@@ -1,5 +1,10 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.9.1 -
+
+### Fixed
+- At Risk Matrix is now an actual Mocha Suite.
+
 ## 1.9.0 - 2024-09-30
 
 ### Added
