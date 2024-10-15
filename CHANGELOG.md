@@ -2,6 +2,11 @@
 
 ## x.x.x - yyyy-mm-dd
 
+### Added
+- A new export `helpers`.
+- `helpers.setupMatrix` for easy matrix setup.
+- `helpers.setupRow` for easy row setup.
+
 ### Changed
 - Upgraded various dependencies.
 - Integrated test running into main package.json.
