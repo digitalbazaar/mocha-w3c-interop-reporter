@@ -147,6 +147,23 @@ This can be used to debug results with out having to rerun an entire test suite.
 npx interopReporter makeReport --suiteLog=./suite.log --output=./reports/manualReport.html
 ```
 
+The reporter exports a helper function for matrix and row setup:
+
+```js
+import {filterByTag} from 'vc-test-suite-implementations';
+import {helpers} from '@digitalbazaar/mocha-w3c-interop-reporter';
+
+const {match} = filterByTag({tags: ['my-test-suite']});
+
+describe('My Suite', function() {
+  helpers.setupMatrix.call(this, match);
+  beforeEach(helpers.setupRow);
+  it('implementation MUST conform to', async function() {
+
+  });
+})
+```
+
 The above reporter options can also be persisted in a JSON config to pass to the
 CLI in the `--config` parameter.
 
