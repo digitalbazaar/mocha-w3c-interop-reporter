@@ -1,5 +1,12 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## 1.10.0 -
+
+### Added
+- A new export `helpers`.
+- `helpers.setupMatrix` for easy matrix setup.
+- `helpers.setupRow` for easy row setup.
+
 ## 1.9.0 - 2024-09-30
 
 ### Added
