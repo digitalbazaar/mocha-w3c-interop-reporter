@@ -138,6 +138,8 @@ mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-opt
 
   - *templateData* - Is an optional reporter option that dumps the data used to make the HTML report as json.
 
+  - *stats* - Enable report statistics. Currently aggregates all matrices. Off by default.
+
 The reporter also has an npx binary for creating test html manually from mocha suites.
 This can be used to debug results with out having to rerun an entire test suite.
 
