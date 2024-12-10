@@ -57,7 +57,7 @@ A helpers file can be specified to add project specific helpers to report templa
 
 const helpers = {
   upperCaseTitle(testTitle) {
-    return testTitle.toUpperCase();    
+    return testTitle.toUpperCase();
   }
 };
 export default helpers;
@@ -67,7 +67,7 @@ then specify the path to the helpers file in the `--reporter-options helpers="$P
 
 Handlebars lets you use the helpers inside of templates like this:
 
-```
+```html
 <td class="{{state}} {{getOptional optional}}">{{getStatusMark state}}</td>
 ```
 
@@ -107,9 +107,10 @@ The templates are written in [Handlebars](https://handlebarsjs.com/).
 
 Most of the configuration options can be specified by command line options:
 
-```
+```sh
 mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options body=\"$PWD/body.hbs\",matrix=\"$PWD/matrix.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Test Interoperability Report 1.0\",helpers=\"$PWD/templateHelpers.js\",suiteLog='./suite.log' --timeout 15000"
 ```
+
 - `--reporter` -  Specifies the reporter and is required.
 
 - `--reporter-options` - Passes options to the reporter in the form `key=value[,key2=value[,...]]`.
@@ -140,7 +141,7 @@ mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-opt
 The reporter also has an npx binary for creating test html manually from mocha suites.
 This can be used to debug results with out having to rerun an entire test suite.
 
-```
+```sh
 npx interopReporter makeReport --suiteLog=./suite.log --output=./reports/manualReport.html
 ```
 
