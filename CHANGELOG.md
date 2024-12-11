@@ -1,6 +1,6 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## 1.10.0 - yyyy-mm-dd
+## 1.10.0 - 2024-12-11
 
 ### Added
 - Report statistics can be enabled via the `stats` reporter option.
