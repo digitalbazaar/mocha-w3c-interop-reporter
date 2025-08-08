@@ -12,5 +12,4 @@ tests/*.html
 mochawesome-report/
 TAGS
 node_modules/
-package-lock.json
 *.vswp
