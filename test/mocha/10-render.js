@@ -56,4 +56,18 @@ describe('generate', async function() {
       join(rootPath, 'test/highlight-report.html'));
     shouldBeReport(report, expectedReport.toString());
   });
+  it('should require helpers from reporter-options', async function() {
+    const report = await makeReport({
+      suite: highlightMatrix,
+      stats,
+      config: {
+        ...config,
+        ...{helpers: join(rootPath, 'test/projectHelpers.js')}
+      }
+    });
+    await asyncWriteFile(join(rootPath, 'test/highlight-report.html'), report);
+    const expectedReport = await asyncReadFile(
+      join(rootPath, 'test/highlight-report.html'));
+    shouldBeReport(report, expectedReport.toString());
+  });
 });
