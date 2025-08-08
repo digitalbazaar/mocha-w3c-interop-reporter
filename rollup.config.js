@@ -14,6 +14,6 @@ export default {
   external: [
     ...Object.keys(pkg.dependencies),
     ...Object.keys(pkg.peerDependencies),
-    'path', 'fs', 'util', 'url'
+    'module', 'path', 'fs', 'util', 'url'
   ]
 };
