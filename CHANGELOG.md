@@ -1,5 +1,11 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
+## x.x.x - yyyy-mm-dd
+
+### Changed
+- Upgraded various dependencies.
+- Integrated test running into main package.json.
+
 ## 1.10.0 - 2024-12-11
 
 ### Added
