@@ -46,18 +46,18 @@
   },
   "homepage": "https://github.com/digitalbazaar/mocha-w3c-interop-reporter#readme",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "handlebars": "^4.7.7",
-    "uuid": "^8.3.2",
-    "yargs": "^17.7.2"
+    "chalk": "^5.5.0",
+    "handlebars": "^4.7.8",
+    "uuid": "^11.1.0",
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "chai": "^5",
     "eslint": "^8.15.0",
     "eslint-config-digitalbazaar": "^3.0.0",
     "eslint-plugin-jsdoc": "^39.2.9",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.72.1"
+    "rimraf": "^6.0.1",
+    "rollup": "^4.46.2"
   },
   "peerDependencies": {
     "mocha": "^11"
