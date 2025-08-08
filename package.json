@@ -21,7 +21,8 @@
     "build": "npm run clear && npm run rollup",
     "clear": "rimraf dist/ && mkdir dist",
     "prepare": "npm run build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "mocha test/mocha/ --timeout 1500"
   },
   "repository": {
     "type": "git",
@@ -51,9 +52,11 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "chai": "^4.3.4",
     "eslint": "^8.15.0",
     "eslint-config-digitalbazaar": "^3.0.0",
     "eslint-plugin-jsdoc": "^39.2.9",
+    "mocha": "^8.3.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.72.1"
   },
