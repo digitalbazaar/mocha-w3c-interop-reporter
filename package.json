@@ -60,6 +60,6 @@
     "rollup": "^4.46.2"
   },
   "peerDependencies": {
-    "mocha": "^11"
+    "mocha": "11.7.0"
   }
 }
