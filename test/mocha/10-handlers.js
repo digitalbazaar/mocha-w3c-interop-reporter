@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2021-2022 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
+import * as chai from 'chai';
 import {formatStats} from '../../lib/handlers.js';
 
 const should = chai.should();

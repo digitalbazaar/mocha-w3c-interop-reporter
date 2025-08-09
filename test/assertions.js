@@ -1,4 +1,4 @@
-import chai from 'chai';
+import * as chai from 'chai';
 
 const should = chai.should();
 export const shouldBeReport = (actualReport, expectedReport) => {
