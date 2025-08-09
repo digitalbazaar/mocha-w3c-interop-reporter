@@ -38,7 +38,8 @@ yargs(hideBin(argv))
 async function makeReportHandler(commands) {
   const output = commands?.output;
   const config = commands?.config ?
-    (await getJson(commands.config)) : getConfig();
+    (getConfig({reporterOptions: await getJson(commands.config)})) :
+    getConfig();
   const suite = commands?.suiteLog ?
     (await getJson(commands.suiteLog)) : false;
   const html = await makeReport({
