@@ -147,6 +147,9 @@ This can be used to debug results with out having to rerun an entire test suite.
 npx interopReporter makeReport --suiteLog=./suite.log --output=./reports/manualReport.html
 ```
 
+The above reporter options can also be persisted in a JSON config to pass to the
+CLI in the `--config` parameter.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
