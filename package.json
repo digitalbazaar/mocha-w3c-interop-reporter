@@ -14,7 +14,8 @@
   "files": [
     "lib/*",
     "dist/*",
-    "templates/*"
+    "templates/*",
+    "respec.json"
   ],
   "scripts": {
     "rollup": "rollup -c rollup.config.js",
