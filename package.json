@@ -54,12 +54,15 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
+    "@mnrendra/rollup-plugin-esbuild": "^1.0.0",
+    "@mnrendra/rollup-plugin-mixexport": "^3.2.4",
     "chai": "^5",
     "eslint": "^8.15.0",
     "eslint-config-digitalbazaar": "^3.0.0",
     "eslint-plugin-jsdoc": "^39.2.9",
     "rimraf": "^6.0.1",
-    "rollup": "^4.46.2"
+    "rollup": "^4.46.2",
+    "rollup-plugin-esbuild": "^6.2.1"
   },
   "peerDependencies": {
     "mocha": "11.7.0"
