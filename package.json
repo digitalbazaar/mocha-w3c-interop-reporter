@@ -24,7 +24,7 @@
     "prepare": "npm run build",
     "lint": "eslint .",
     "test": "mocha test/mocha/ --timeout 1500",
-    "test:helpers": "npm run build && mocha test/mocha/ --timeout 1500 --reporter dist/cjs/index.cjs --reporter-options helpers=test/projectHelpers.js"
+    "test:helpers": "npm run build && mocha test/mocha/ --timeout 1500 --reporter dist/cjs/index.cjs --reporter-options helpers=\"$PWD/test/projectHelpers.js\""
   },
   "repository": {
     "type": "git",
