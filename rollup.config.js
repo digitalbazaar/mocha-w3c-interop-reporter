@@ -1,4 +1,7 @@
 import {createRequire} from 'node:module';
+import esbuild from '@mnrendra/rollup-plugin-esbuild';
+import mixexport from '@mnrendra/rollup-plugin-mixexport';
+
 const require = createRequire(import.meta.url);
 const pkg = require('./package.json');
 
@@ -10,6 +13,10 @@ export default {
       file: 'dist/cjs/index.cjs',
       format: 'cjs',
     }
+  ],
+  plugins: [
+    esbuild(),
+    mixexport()
   ],
   external: [
     ...Object.keys(pkg.dependencies),
