@@ -1,10 +1,16 @@
 # @digitalbazaar/mocha-w3c-interop-reporter ChangeLog
 
-## x.x.x - yyyy-mm-dd
+## 1.11.0 - 2025-08-13
 
 ### Changed
 - Upgraded various dependencies.
 - Integrated test running into main package.json.
+- Switched to `picolors` from `chalk` for CLI color output.
+
+### Fixed
+- Properly load config files.
+- Handle require()-based helper loading.
+- Add missing default `respec.json` config fallback file to package.
 
 ## 1.10.0 - 2024-12-11
 
